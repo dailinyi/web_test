@@ -21,6 +21,11 @@ main{
 }
 #top-navigate{
 	display:flex;
+	display: box;			  /* OLD - Android 4.4- */
+ 	display: -webkit-box;	  /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;		 /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;	  /* TWEENER - IE 10 */
+    display: -webkit-flex;
 	padding:10px;
 }
 #top-navigate span{
@@ -39,6 +44,11 @@ main{
 }
 #top-label{
 	display:flex;
+	display: box;			  /* OLD - Android 4.4- */
+ 	display: -webkit-box;	  /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;		 /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;	  /* TWEENER - IE 10 */
+    display: -webkit-flex;
 	border-bottom:solid 3px #f1f1f1;
 	padding:20px 0px;
 	margin:20px 20px;
@@ -79,8 +89,31 @@ h1{
 .module-div{
 	padding-top:30px;
 	display:flex;
-	flex-flow: row wrap;
-	justify-content: space-between;
+	display: box;			  /* OLD - Android 4.4- */
+ 	display: -webkit-box;	  /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;		 /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;	  /* TWEENER - IE 10 */
+    display: -webkit-flex;
+	-webkit-box-orient: horizontal;
+  /* 12版 */
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+ -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  flex-wrap: wrap;
+  /* 09版 */
+  -webkit-box-pack: space-between;
+  /* 12版 */
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
 }
 .module-left{
 	border:solid 1px #F90;
@@ -92,8 +125,26 @@ h1{
 }
 .module-middle{
 	display:flex;
-	flex-direction:column;
-	justify-content: space-between;
+	display: box;			  /* OLD - Android 4.4- */
+ 	display: -webkit-box;	  /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;		 /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;	  /* TWEENER - IE 10 */
+    display: -webkit-flex;
+	-webkit-box-orient: horizontal;
+  /* 12版 */
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+	 /* 09版 */
+  -webkit-box-pack: space-between;
+  /* 12版 */
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
 	float:left;
 	width:33%;
 }
@@ -111,16 +162,56 @@ h1{
 .module-right{
 	float:left;
 	display:flex;
-	flex-direction:column;
-	justify-content: space-between;
+	display: box;			  /* OLD - Android 4.4- */
+ 	display: -webkit-box;	  /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;		 /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;	  /* TWEENER - IE 10 */
+    display: -webkit-flex;
+	-webkit-box-orient: horizontal;
+  /* 12版 */
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+	 /* 09版 */
+  -webkit-box-pack: space-between;
+  /* 12版 */
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
 	width:33%;
 }
 .bottom-div{
 	padding-top:30px;
 	padding-bottom:20px;
 	display:flex;
-	flex-flow: row wrap;
-	justify-content: flex-left;
+	display: box;			  /* OLD - Android 4.4- */
+ 	display: -webkit-box;	  /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;		 /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;	  /* TWEENER - IE 10 */
+    display: -webkit-flex;
+	-webkit-box-orient: horizontal;
+  /* 12版 */
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+ -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: space-between;
+  /* 12版 */
+  -webkit-justify-content: flex-left;
+  -moz-justify-content: flex-left;
+  -ms-justify-content: flex-left;
+  -o-justify-content: flex-left;
+  justify-content: flex-left;
 }
 .bottom-left{
 	border:solid 1px #F90;
@@ -134,8 +225,26 @@ h1{
 .bottom-right{
 	float:left;
 	display:flex;
-	flex-direction:column;
-	justify-content: space-between;
+	display: box;			  /* OLD - Android 4.4- */
+ 	display: -webkit-box;	  /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;		 /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;	  /* TWEENER - IE 10 */
+    display: -webkit-flex;
+	-webkit-box-orient: horizontal;
+  /* 12版 */
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+	 /* 09版 */
+  -webkit-box-pack: space-between;
+  /* 12版 */
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
 	width:30%;
 }
 .bottom-right-top{
@@ -146,9 +255,32 @@ h1{
 	color:#989898;
 }
 #bottom-bottom{
-	display:flex;
-	flex-flow: row wrap;
-	justify-content: space-between;
+display:flex;
+	display: box;			  /* OLD - Android 4.4- */
+ 	display: -webkit-box;	  /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;		 /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;	  /* TWEENER - IE 10 */
+    display: -webkit-flex;
+	-webkit-box-orient: horizontal;
+  /* 12版 */
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+ -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  flex-wrap: wrap;
+  /* 09版 */
+  -webkit-box-pack: space-between;
+  /* 12版 */
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
 	padding:20px 0px;
 }
 #bottom-bottom img{
