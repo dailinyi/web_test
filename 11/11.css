@@ -101,14 +101,12 @@ h1{
 	background-color:#f1f1f1;
 	text-align:center;
 	width:100%;
-	padding-top:12%;
-	padding-bottom:12%;
+	padding:20% 0px;
 }
 .module-middle-bottom{
 	text-align:center;
 	background-color:#f1f1f1;
-	padding-top:12%;
-	padding-bottom:12%;
+	padding:20% 0px;
 }
 .module-right{
 	float:left;
