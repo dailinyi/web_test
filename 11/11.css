@@ -40,6 +40,7 @@ main{
 #top-label{
 	display:flex;
 	border-bottom:solid 3px #f1f1f1;
+	padding:20px 0px;
 	margin:20px 20px;
 }
 #top-label div{
@@ -52,6 +53,7 @@ main{
 }
 h4{
 	color:#989898;
+	margin-bottom:50px;
 }
 ul{
 	list-style-type:none;
@@ -59,7 +61,6 @@ ul{
 li{
 	float:left;
 	width:33%;
-	margin-bottom:50px;
 }
 .top-bottom-li{
 	border-right:solid 3px #f1f1f1;
