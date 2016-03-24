@@ -2,7 +2,7 @@
 ---
 
 * 零基础HTML编码
-> * 增加PropertyUtils.java,验证公共方法
+> * 编写了一个没有css的页面，全是html
 > * 增加VerifyUtils.java,验证公共方法
 
 * v1.1.0 (2015-11-5)
