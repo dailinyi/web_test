@@ -1,3 +1,92 @@
 @charset "utf-8";
 /* CSS Document */
-
+th{
+	background-color:#000;
+	color:#FFF;
+}
+table tr:nth-child(even){
+	background:#CCC;
+}
+table tr:nth-child(1){color:#F00;}
+table tr:nth-child(2){color:#F00;}
+table tr:nth-child(3){color:#F00;}
+#input-div{
+	text-align:center;
+	width:200px;
+}
+input{
+	width:100px;
+	transition:width 2s;
+	-moz-transition:width 2s; /* Firefox 4 */
+    -webkit-transition:width 2s; /* Safari and Chrome */
+    -o-transition:width 2s; /* Opera */
+}
+input:focus {
+	width:200px;
+}
+#banner{
+	width:300px;
+	overflow:hidden;
+}
+ul {
+	position: relative;
+	padding:0px;
+	list-style:none;
+	left: 0;
+	height: 150px;
+	width: 300%;
+	transition: left 1s ease-in-out;
+	-moz-transition: left 1s ease-in-out; 
+	-webkit-transition: left 1s ease-in-out; 
+	-o-transition: left 1s ease-in-out;
+}
+li:nth-child(1) {
+	background-color:#0F0;
+	float: left;
+	width: 300px;
+	height: 150px;
+}
+li:nth-child(2){
+	background-color:#00F;
+	float: left;
+	width: 300px;
+	height: 150px;
+}
+li:nth-child(3){
+	background-color: #FF0;
+	float: left;
+	width: 300px;
+	height: 150px;
+}
+#banner-div {
+	font-size: 15px;
+	position: relative;
+	text-align: right;
+	top: -36px;
+	width: 300px;
+	height: 30px;
+}
+#banner-div div {
+	background-color: #0FF;
+	display: inline-block;
+	text-align: center;
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+}
+a:link, a:visited {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	color: #fff;
+	text-decoration: none;
+}
+#banner1:target~ul {
+	left: 0;
+}
+#banner2:target~ul {
+	left: -100%;
+}
+#banner3:target~ul {
+	left: -200%;
+}

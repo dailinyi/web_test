@@ -1,84 +1,44 @@
 百度前端
 ---
 
-* 零基础HTML编码
+* 任务一：零基础HTML编码
 > * 编写了一个没有css的页面，全是html
-> * 增加VerifyUtils.java,验证公共方法
+> * 主要是文字段落
 
-* v1.1.0 (2015-11-5)
-> * 增加UnicodeUtils.java,用来从正常字符和unicode字符转码
-> * 增加EmojiUtils.java,用来过滤emoji字符
-> * 删除weixinpopular依赖
+* 任务二：零基础HTML及CSS编码（一）
+> * 对任务一的html加上css样式
+> * 对段落的布局
 
-* v1.1.1 (2015-11-17)
-> * DateUtils 增加中国通用时间(微信时间用)
+* 任务三：三栏式布局
+> * 左右两栏宽度固定，中间一栏根据父元素宽度填充满
+> * 解决中间的问题
 
-* v1.1.2 (2015-11-17)
-> * DateUtils 增加中国通用时间(微信时间用) yyyy年MM月dd日 HH:mm
+* 任务四：定位和居中问题
+> * 灰色元素水平垂直居中，有两个四分之一圆位于其左上角和右下角
+> * 垂直水平居中和圆角问题
 
-* v1.1.2 (2015-12-3)
-> * 修改ProperitesUtils方法,兼容Linux
+* 任务五：零基础HTML及CSS编码（二）
+> * 对任务二的页面再进行调整，分成左右两部分
+> * 页面右侧部分为固定宽度，左侧保持与浏览器窗口变化同步自适应变化
 
-* v1.2.0 (2015-12-18)
-> * 增加HttpUtils,封装get请求,返回JsonObject
+* 任务六：通过HTML及CSS模拟报纸排版
+> * 根据设计稿做报纸排版
+> * 主要是各种字体文字的装饰
 
-* v1.3.0 (2015-12-24)
-> * 增加PriceUtils,分转元,元转分
-> * 删除log4j依赖
-> * 增加接口用抽象结果类
+* 任务八：响应式网格（栅格化）布局
+> * 根据屏幕宽度，元素占的栏数不同
+> * 屏幕宽度小于768px时，变化
 
-* v1.3.1 (2015-12-29)
-> * HttpUtils 多态,增加返回String类型和特定Object类型的方法
+* 任务十：Flexbox 布局练习
+> * 根据屏幕宽度，元素两侧靠边，中间平均分布
+> * 屏幕宽度小于640px时，变化
 
-* v1.3.2 (2015-12-29)
-> * 修复不能反序列化父类的bug
+* 任务十一：移动Web页面布局实践
+> * 移动端Web页面
+> * 主要应用flex布局，里面好多兼容性标签
 
-* v1.3.3 (2015-12-29)
-> * 修复HttpUtils调用可能无返回值问题
-
-* v1.3.4 (2015-12-29)
-> * HttpUtils增加状态判断和重试功能
-> * HttpUtils转json方法,去掉报错问题
-> * Result类增加附属属性:info
-
-* v1.4.0(2016-01-06)
-> * 增加通过图片url转成base64方法
-
-* v1.5.0(2016-01-06)
-> * 增加LogType成为公用方法
-
-* v2.5.0(2016-01-07)
-> * 修改log4j为logback依赖
-
-* v2.5.1(2016-01-07)
-> * 为logback增加日志筛选功能插件
-
-* v2.6.0(2016-01-25)
-> * 增加向flume输出的appender
-> * PropertyUtils增加方法getCommonProperty:根据属性名称从默认环境变量${ESTIMATE_CONFIG_HOME}/config/config.properties文件中获取属性
-> * PropertyUtils增加方法getApplicationProperty(applicationName,configName,propertyName):根据指定的应用路径名字,配置文件名字,属性名称从默认环境变量${ESTIMATE_CONFIG_HOME}获取属性
-> * PropertyUtils增加方法getApplicationProperty(fileName,propertyName):根据指定的应用路径,属性名称从默认环境变量${ESTIMATE_CONFIG_HOME}获取属性
-
-* v2.6.1(2016-01-25)
-> * 修正null也作为空处理
-
-* v2.6.2(2016-02-17)
-> * 增加logback redis appender依赖
-
-* v2.7.0(2016-02-18)
-> * 增加accessTokenUtils 可通过该类中方法获取accessToken
-> * 增加JsApiUtils 可通过该类中方法获取JsApi
-> * 增加DataCubeUtils 可通过该类中方法获取某天的关注量
-> * 在DateUtils中增加重载类getStartTimeOfDay,获取当天0点,返回日期格式
-
-* v2.7.1(2016-02-26)
-> * 修改JsApiUtils 变为静态方法
-
-* v2.7.2(2016-03-01)
-> * 修改AccessTokenUtils不存redis的bug
-
-* v2.7.3(2016-03-16)
-> * 增加UserInfoUtils,通过code换openId 和换UserInfo
-
-* v2.7.4(2016-03-24)
-> * 增加ShareSignUtil,获取分享所需要的签名
+* 任务十二：学习CSS 3的新特性
+> * 实现单双行列不同颜色，且前三行特殊表示的表格
+> * 实现正常状态和focus状态宽度不一致的input文本输入框，且鼠标焦点进入输入框时，宽度的变化以动画呈现
+> * 不使用JavaScript，实现一个Banner图轮流播放的效果，且点击右下角的1，2，3可以切换到对应Banner图片
+> * 利用列表显示和隐藏，left移动做成动画效果，利用href="#banner",对应id=banner实现控制ul，#banner1:target~ul
