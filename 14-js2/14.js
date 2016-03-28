@@ -5,18 +5,24 @@ var aqiData = [
   ["上海", 50],
   ["福州", 10],
   ["广州", 50],
-  ["成都", 90],
+  ["成都", 120],
   ["西安", 100]
 ];
-for(i=0;i<aqiData.length;i++)
+/*for(i=0;i<aqiData.length;i++)
 {
 	if(aqiData[i][1]>60)
 	{
-		var data=aqiData[i];
 		$('ul').append("<li>"+aqiData[i]+"</li>");
 	}
-};
-$('ul').append(data);
-$.each(aqiData,function(index,value)
-{alert(value[1]);});
+};*/
+
+aqiData=$.grep(aqiData, function(index,value){
+  return aqiData[value][1] > 60;
+});//筛选符合条件的数组，返回数组
+aqiData=aqiData.sort(function(a,b){
+	return a[1]-b[1];
+});//排序，按照正序排序
+for(i=0;i<aqiData.length;i++){
+	$('ul').append("<li>"+aqiData[i]+"</li>");
+};//逐行显示
 });
