@@ -71,16 +71,15 @@ ul{
 li{
 	float:left;
 	width:33%;
-	margin-bottom:50px;
 }
 .top-bottom-li{
 	border-right:solid 3px #f1f1f1;
+	margin-bottom:50px;
 }
 .module{
 	clear:both;
 	padding:20px;
 	border-top:solid 20px #f1f1f1;
-	margin-top:20px;
 }
 h1{
 	border-bottom:solid 2px #f1f1f1;
