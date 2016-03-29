@@ -1,0 +1,20 @@
+@charset "utf-8";
+/* CSS Document */
+table{
+	border:solid 1px #000;
+	border-collapse:collapse;
+	text-align:center;
+	font-family:微软雅黑;
+}
+th{
+	border:solid 1px #000;
+	background-color:#ccc;
+}
+td{
+	border:solid 1px #000;
+}
+table tr:nth-child(even){
+	background:#CCC;
+}
+table tr:nth-child(30) td:nth-child(1){background-color:#FFF;}
+table tr:nth-child(25) td:nth-child(1){background-color:#CCC;}
