@@ -5,6 +5,7 @@ table{
 	border-collapse:collapse;
 	text-align:center;
 	font-family:微软雅黑;
+	width:100%;
 }
 th{
 	border:solid 1px #000;
