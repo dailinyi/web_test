@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+ <html>
+     <head>
+         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+         <title>Highcharts Example---基本的曲线图</title>
+ 
+         <!-- 1.引入jquery库 -->
+         <script src="http://cdn.staticfile.org/jquery/1.8.3/jquery.js" type="text/javascript"></script>
+         <!-- 2.引入highcharts的核心文件 -->
+         <script type="text/javascript" src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>
+         <!-- 3.引入导出需要的js库文件 -->
+         <script type="text/javascript" src="http://cdn.hcharts.cn/highcharts/modules/exporting.js"></script>
+ 
+         <!--4.js脚本-->
+         <script type="text/javascript">
+         
+ var chart;
+             $(document).ready(function() {
+                 chart = new Highcharts.Chart({
+                     chart: {
+                         renderTo: 'container',
+                         defaultSeriesType: 'column',//图表类别，可取值有：line、spline、area、areaspline、bar、column等
+                         marginRight: 130,
+                         marginBottom: 25
+                     },
+                     title: {
+                         text: '襄阳(一级标题)',//设置一级标题
+                         x: -20 //center
+                     },
+                     subtitle: {
+                         text: '2011温度各区对比(二级标题)',//设置二级标题
+                         x: -20
+                     },
+                     xAxis: {
+                         categories: ['2011/1', '2011/2', '2011/3', '2011/4', '2011/5', '2011/6', 
+ '2011/7', '2011/8', '2011/9', '2011/10', '2011/11', '2011/12']//设置x轴的标题
+
+                     },
+                     yAxis: {
+                         title: {
+                             text: '温度 (°C)'//设置y轴的标题
+                         },
+                         plotLines: [{
+                             value: 0,
+                             width: 1,
+                             color: '#808080'
+                         }]
+                     },
+                     tooltip: {
+                         formatter: function() {
+ return '<b>'+ this.series.name +'</b><br/>'+
+ this.x +': '+ this.y +'°C';//鼠标放在数据点的显示信息，但是当设置显示了每个节点的数据项的值时就不会再有这个显示信息
+                         }
+                     },
+                     legend: {
+                         layout: 'vertical',
+                         align: 'left',//设置说明文字的文字 left/right/top/
+                         verticalAlign: 'top',
+                         x: -10,
+                         y: 100,
+                         borderWidth: 0
+                     },
+                     exporting:{
+                          enabled:true //用来设置是否显示‘打印’,'导出'等功能按钮，不设置时默认为显示
+                     },
+                     plotOptions: {
+                         line: {
+                             dataLabels: {
+                                 enabled: true //显示每条曲线每个节点的数据项的值
+                             },
+                             enableMouseTracking: false
+                         }
+                     },
+                     series: [{
+                         name: '襄城',//每条线的名称
+                         data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]//每条线的数据
+                     }, {
+                         name: '樊城',
+                         marker:{
+                             symbol:"square"
+                         },
+                         data: [{
+                                y:-3,
+                                marker:{
+                                symbol:'url(sun.png)'//在线上的某个点显示图标
+                                }
+                         }, 0.8, 5.7, 11.3, 17.0, 22.0, 24.8, 24.1, 20.1, 14.1, 8.6, 2.5]
+                     }, {
+                         name: '襄州',
+                         data: [-0.9, 0.6, 3.5, 8.4, 13.5, 17.0, 18.6, 17.9, 14.3, 9.0, 3.9, 1.0]
+                     }, {
+                         name: '东津',
+                         data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+                     },{
+                         name: '鱼梁州',
+                         data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+                     }]
+                 });
+                 
+                 
+             });
+                 
+ </script>
+     </head>
+     <body>
+         <!--5.导入容器用于显示图表-->
+         <div id="container"
+             style="width: 800px; height: 400px; margin: 0 auto"></div>
+     </body>
+ </html>
