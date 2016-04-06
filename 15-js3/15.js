@@ -7,6 +7,7 @@ $(document).ready(function(e) {
 		var num=$(this).text().split('：');
 		
 		aArray.push(num);
+		alert(aArray);
     });
 	console.log(aArray);
 	

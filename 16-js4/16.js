@@ -7,48 +7,53 @@
  *    "上海": 40
  * };
  */
-var aqiData = {};
+ $(document).ready(function(e) {
+	 var aqiData = [];
+	 $('#add-btn').live('click',function(e) {//添加
+       	var city=$.trim($('#aqi-city-input').val());//前后去空格
+		var value=$.trim($('#aqi-value-input').val());
+		var zyw=/^[a-zA-Z\u4e00-\u9fa5]+$/;//判断是不是中英文
+		var ex = /^\d+$/;
+		if(city==""){
+			alert('输入不能为空');
+		}else if(value==""){
+			alert('输入不能为空');
+		}else if(!zyw.test(city)){
+			alert('城市名必须为中英文字符');
+		//}else if(isNaN(value)){
+		//	alert("空气质量指数必须为整数");//判断是不是数字
+		}else if(!ex.test(value)) {
+			alert("空气质量指数必须为整数");//判断是不是整数
+		}else{
+			aqiData.push([city,value]);//存入数组
+			$('#aqi-table').empty();//清空
+			var th="<tr><td>城市</td><td>空气质量</td><td>操作</td></tr>";
+			$('#aqi-table').append(th);
+			for(i=0;i<aqiData.length;i++){
+				var tr='<tr><td>'+aqiData[i][0]+'</td><td>'+aqiData[i][1]+'</td><td><button>删除</button></td></tr>';
+				$('#aqi-table').append(tr);
+			};
+		}
+	});
+	$('#aqi-table tr td button').live('click',function(){//删除
+		var prevtd=$(this).parent().prev("td").text();//取删除的一行
+		for(i=0;i<aqiData.length;i++){
+			if(aqiData[i][1]==prevtd){
+				for(j=i;j<aqiData.length;j++){
+					aqiData[j]=aqiData[j+1];
+				};
+				aqiData.length-=1;//数组长度-1
+				$('#aqi-table').empty();
+				var th="<tr><td>城市</td><td>空气质量</td><td>操作</td></tr>";
+		        $('#aqi-table').append(th);
+				for(k=0;k<aqiData.length;k++){
+					var tr='<tr><td>'+aqiData[k][0]+'</td><td>'+aqiData[k][1]+'</td><td><button>删除</button></td></tr>';
+					$('#aqi-table').append(tr);
+				};
+			};
+		};
+	});
+    
+});
 
-/**
- * 从用户输入中获取数据，向aqiData中增加一条数据
- * 然后渲染aqi-list列表，增加新增的数据
- */
-function addAqiData() {
 
-}
-
-/**
- * 渲染aqi-table表格
- */
-function renderAqiList() {
-
-}
-
-/**
- * 点击add-btn时的处理逻辑
- * 获取用户输入，更新数据，并进行页面呈现的更新
- */
-function addBtnHandle() {
-  addAqiData();
-  renderAqiList();
-}
-
-/**
- * 点击各个删除按钮的时候的处理逻辑
- * 获取哪个城市数据被删，删除数据，更新表格显示
- */
-function delBtnHandle() {
-  // do sth.
-
-  renderAqiList();
-}
-
-function init() {
-
-  // 在这下面给add-btn绑定一个点击事件，点击时触发addBtnHandle函数
-
-  // 想办法给aqi-table中的所有删除按钮绑定事件，触发delBtnHandle函数
-
-}
-
-init();
