@@ -7,7 +7,7 @@
          <!-- 2.引入highcharts的核心文件 -->
          <script type="text/javascript" src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>
          <!-- 3.引入导出需要的js库文件 -->
-         <script type="text/javascript" src="cdn.hcharts.cn/highcharts/modules/exporting.js"></script>
+         <script type="text/javascript" src="http://cdn.hcharts.cn/highcharts/modules/exporting.js"></script>
     <script src="17.js"></script>
   </head>
 <body>
@@ -20,8 +20,7 @@
 
   <fieldset>
     <legend>请选择查看的城市：</legend>
-    <select id="city-select">
-      <option>北京</option>
+    <select id="city-select" onchange="aa()">
     </select>
   </fieldset>
 
