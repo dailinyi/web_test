@@ -44,8 +44,10 @@ var aqiSourceData = {
 
 var quality=[];
 var time=[];
-function aa(){
-	if($('input:checked').val()=="day"){
+var aqiSourceDataMonth={};
+var aqiSourceDataWeek={};
+function aa(){//页面切换
+	if($('input:checked').val()=="day"){//按照日期查看
 		$.each(aqiSourceData,function(key,value){
 			if(key==$('option:selected').val()){
 				var i=0;
@@ -58,18 +60,110 @@ function aa(){
 				//console.log(value);
 			}
 		});
-	}else if($('input:checked').val()=="week"){
-		//alert('aaa');
-		$('#aqi-chart-wrap').empty();
-	}else if($('input:checked').val()=="month"){
-		//alert('bbb');
-		$('#aqi-chart-wrap').empty();
+	}else if($('input:checked').val()=="week"){//按照周查看
+		$.each(aqiSourceData,function(key,value){
+			if(key==$('option:selected').val()){
+				var i=0;
+				var qualityweek=0;
+				var n=0;
+				var array=[];
+				$.each(value,function(k,v){
+					var array=k.split('-');
+					//alert(array[1]);
+					var m="第"+getWeekNumber(array[0], array[1], array[2])+"周";//周处理函数
+					if(m==n){
+						qualityweek+=v;
+						aqiSourceDataWeek[m]=qualityweek;
+						//console.log(aqiSourceDataMonth);
+					}else{
+						qualityweek=v;
+						aqiSourceDataWeek[m]=qualityweek;
+						//console.log(aqiSourceDataMonth);
+					}
+					n=m;
+				});
+				time.length=0;
+				quality.length=0;
+				$.each(aqiSourceDataWeek,function(k,v){
+					//alert(k+v);
+					time[i]=k;
+					quality[i]=v;
+					i++;
+				});
+				bb();
+				//console.log(value);
+			}
+		});
+	}else if($('input:checked').val()=="month"){//按照月份查看
+		$.each(aqiSourceData,function(key,value){
+			if(key==$('option:selected').val()){//确定城市
+				var i=0;
+				var qualityMonth=0;
+				var n=0;
+				$.each(value,function(k,v){//按照月份计算数据
+					var month = new Date(k);
+					var m = month.getFullYear()+"-"+(month.getMonth() + 1);
+					if(m==n){
+						qualityMonth+=v;
+						aqiSourceDataMonth[m]=qualityMonth;
+						//console.log(aqiSourceDataMonth);
+					}else{
+						qualityMonth=v;
+						aqiSourceDataMonth[m]=qualityMonth;
+						//console.log(aqiSourceDataMonth);
+					}
+					n=m;
+				});
+				time.length=0;
+				quality.length=0;
+				$.each(aqiSourceDataMonth,function(k,v){//显示在图表中
+					//alert(k+v);
+					time[i]=k;
+					quality[i]=v;
+					i++;
+				});
+				bb();
+				//console.log(value);
+			}
+		});
 	};
 };
 
+//日期处理函数
+function isLeapYear(year) {
+      return (year % 400 == 0) || (year % 4 == 0 && year % 100 != 0);
+}
+
+function getMonthDays(year, month) {
+     return [31, null, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31][month] || (isLeapYear(year) ? 29 : 28);
+}
+function getWeekNumber(y, m, d) {
+     var now = new Date(y, m - 1, d),
+         year = now.getFullYear(),
+         month = now.getMonth(),
+         days = now.getDate();
+     //那一天是那一年中的第多少天
+     for (var i = 0; i < month; i++) {
+         days += getMonthDays(year, i);
+     }
+ 
+     //那一年第一天是星期几
+     var yearFirstDay = new Date(year, 0, 1).getDay() || 7;
+ 
+     var week = null;
+     if (yearFirstDay == 1) {
+         week = Math.ceil(days / yearFirstDay);
+     } else {
+         days -= (7 - yearFirstDay + 1);
+         week = Math.ceil(days / 7) + 1;
+     }
+ 
+     return week;
+ }
+
 
 var chart; 
-function bb(){
+function bb(){//图表
 	chart = new Highcharts.Chart({ 
         chart: { 
             renderTo: 'aqi-chart-wrap', //图表放置的容器，关联DIV#id 
@@ -122,14 +216,13 @@ function bb(){
     }); 
 };
 
-
 $(function() { 
 	$.each(aqiSourceData,function(key,value){
 		var option="<option value='"+key+"'>"+key+"</option>";
 		$('#city-select').append(option);
 	});
-	aa();
-	$("input").change(function() {
+	aa();//默认显示一个图表
+	$("input").change(function() {//切换单选项radio
 		aa();
 	});
 }); 
