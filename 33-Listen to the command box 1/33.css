@@ -1,0 +1,30 @@
+@charset "utf-8";
+/* CSS Document */
+td{
+	border:1px solid #CCC;
+	text-align:center;
+	width:40px;
+	height:40px;
+	font-weight:bold;
+	padding:0px;
+}
+table{
+	border-collapse:collapse;
+	border:none;
+}
+
+table tr td:nth-child(2){border-left:1px solid #000;}
+table tr:nth-child(2) td{border-top:1px solid #000;}
+table tr td:nth-child(11){border-right:1px solid #000;}
+table tr:nth-child(11) td{border-bottom:1px solid #000;}
+table tr td:nth-child(1){border:none;}
+table tr:nth-child(1) td{border:none;}
+tr:nth-child(2) td:nth-child(2){
+	background-color:#F00;
+}
+div{
+	width:10px;
+	height:100%;
+	position:relative;
+	background-color:#00F;
+}
