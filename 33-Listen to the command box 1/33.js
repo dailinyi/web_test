@@ -1,47 +1,38 @@
 // JavaScript Document
 $(document).ready(function(e) {
+	var aa=0;
     $('#send').click(function(e) {
         var command =$('#move').val();
 		if(command=="TUN LEF"){
-			if(($('div').width())==10&&($('div').css("right"))=="auto"){
-				$('div').css({"width":"100%","height":"10px","bottom":"-15px","top":"auto","right":"auto"});
-			}
-			else if(($('div').width())==10&&($('div').css("right"))=="-30px"){
-				$('div').css({"width":"100%","height":"10px","top":"-15px","bottom":"auto","right":"auto"});
-			}
-			else if(($('div').height())==10&&($('div').css("top"))=="-15px"){
-				$('div').css({"width":"10px","height":"100%","right":"auto","top":"auto","bottom":"auto"});
-			}else{
-				$('div').css({"width":"10px","height":"100%","top":"auto","bottom":"auto","right":"-30px"});
-			}
+			aa-=90;
+			$('.div1').css({"rotate":aa});
 		}else if(command=="TUN RIG"){
-			if(($('div').width())==10&&($('div').css("right"))=="auto"){
-				$('div').css({"width":"100%","height":"10px","top":"-15px","bottom":"auto","right":"auto"});
-			}
-			else if(($('div').width())==10&&($('div').css("right"))=="-30px"){
-				$('div').css({"width":"100%","height":"10px","bottom":"-15px","top":"auto","right":"auto"});
-			}
-			else if(($('div').height())==10&&($('div').css("top"))=="-15px"){
-				$('div').css({"width":"10px","height":"100%","right":"-30px","top":"auto","bottom":"auto"});
-			}else{
-				$('div').css({"width":"10px","height":"100%","top":"auto","bottom":"auto","right":"auto"});
-			}
+			aa+=90;
+			$('.div1').css({"rotate":aa});
 		}else if(command=="TUN BAC"){
-			if(($('div').width())==10&&($('div').css("right"))=="auto"){
-				$('div').css({"width":"10px","height":"100%","top":"auto","bottom":"auto","right":"-30px"});
-			}
-			else if(($('div').width())==10&&($('div').css("right"))=="-30px"){
-				$('div').css({"width":"10px","height":"100%","bottom":"auto","top":"auto","right":"auto"});
-			}
-			else if(($('div').height())==10&&($('div').css("top"))=="-15px"){
-				$('div').css({"width":"100%","height":"10px","right":"auto","top":"auto","bottom":"-15px"});
-			}else{
-				$('div').css({"width":"100%","height":"10px","top":"-15px","bottom":"auto","right":"auto"});
-			}
+			aa+=180;
+			$('.div1').css({"rotate":aa});
 		}else if(command=="GO"){
-			alert($('div').parent().parent().first().text());
-			alert($('div').parent().next().html());
-			$('div').parent().next().css("background-color:#F00;");
+			var hang = $('.div1').parents("tr").prevAll().length;   
+			var lie = $('.div1').parent().prevAll().length;   
+			hang = Number(hang);//字符串变为数字   
+			lie = Number(lie); 
+			var html='<div class="div1" style="transform: rotate('+aa+'deg)"><div class="div2"></div></div>';
+			var ro=(($('.div1').css('rotate'))/90)%4;
+			if(ro==0&&lie<11&&lie>1){
+				$("table tr").eq(hang).find("td").eq(lie-1).append(html);
+				$("table tr").eq(hang).find("td").eq(lie).empty(); 
+			}else if((ro==1||ro==-3)&&hang>1&&hang<11){
+				$("table tr").eq(hang-1).find("td").eq(lie).append(html)
+				$("table tr").eq(hang).find("td").eq(lie).empty(); 
+			}else if((ro==-1||ro==3)&&hang>0&&hang<10){
+				$("table tr").eq(hang+1).find("td").eq(lie).append(html);
+				$("table tr").eq(hang).find("td").eq(lie).empty(); 
+			}else if((ro==-2||ro==2)&&lie<10&&lie>0){
+				$("table tr").eq(hang).find("td").eq(lie+1).append(html);
+				$("table tr").eq(hang).find("td").eq(lie).empty(); 
+			}
+			
 		}else{
 			alert("输入命令错误");
 		}
