@@ -38,16 +38,16 @@ body{
 	
 	.carouselItem
 	{
-		width:332.5px;
-		height:207px;
+		width:300px;
+		height:500px;
 		position:absolute;
 		visibility:hidden;
 	}
 	
 	.carouselItemInner
 	{
-		width:332.5px;
-		height:207px;
+		width:300px;
+		height:500px;
 		position:absolute;
 		text-align:center;
 		
