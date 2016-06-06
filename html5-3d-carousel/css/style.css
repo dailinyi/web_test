@@ -1,9 +1,4 @@
 /* hardware accelatator class */	
-body{
-	background-color:#9FF;
-	width:100%;
-	height:100%;
-}
 	.trans3d
 	{
 		-webkit-transform-style: preserve-3d;
@@ -24,31 +19,51 @@ body{
 	#contentContainer
 	{
 		position:absolute;
-		left:50%;  
-		top:50%;  
+		margin-left:-500px;
+		margin-top:-500px;
+		left:50%;
+		top:50%;
+		width:1000px;
+		height:1000px;
 	}
 	
 	#carouselContainer
 	{
 		position:absolute;
-		left:50%;  
-		top:50%;  
-	}
+		margin-left:-500px;
+		margin-top:-500px;
+		left:50%;
+		top:50%;
+		width:1000px;
+		height:1000px;
 	}
 	
 	.carouselItem
 	{
-		width:332.5px;
-		height:207px;
+		width:320px;
+		height:130px;
 		position:absolute;
+		left:50%;
+		top:50%;
+		margin-left:-160px;
+		margin-top:-90px;
 		visibility:hidden;
 	}
 	
 	.carouselItemInner
 	{
-		width:332.5px;
-		height:207px;
+		width:320px;
+		height:130px;
 		position:absolute;
+		background-color:rgba(255, 255, 255, .75);
+		border:10px solid rgba(255, 255, 255, .5);
+		color:aqua;
+		font-size:72px;
+		left:50%;
+		top:50%;
+		margin-left:-160px;
+		margin-top:-90px;
 		text-align:center;
+		padding-top:50px;
 		
 	}
