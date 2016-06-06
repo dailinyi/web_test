@@ -71,13 +71,13 @@
 			//document.getElementById("button").addEventListener("click", onMouseMove, false );
 			window.addEventListener('touchmove', function(event) {
      // 如果这个元素的位置内只有一个手指的话
-   		 if (event.targetTouches.length == 1) {
-　　　　		 event.preventDefault();// 阻止浏览器默认事件，重要 
-				 var touch = event.targetTouches[0];
-			mouseX = -(-(window.innerWidth * .5) + touch.pageX) * .0025;
-			mouseY = -(-(window.innerHeight * .5) + touch.pageY ) * .01;
-			mouseZ = -(radius) - (Math.abs(-(window.innerHeight * .5) + touch.pageY ) - 200);
-        }}, false);
+			 if (event.targetTouches.length == 1) {
+	　　　　		event.preventDefault();// 阻止浏览器默认事件，重要 
+				var touch = event.targetTouches[0];
+				mouseX = -(-(window.innerWidth * .5) + touch.pageX) * .0025;
+				mouseY = -(-(window.innerHeight * .5) + touch.pageY ) * .01;
+				mouseZ = -(radius) - (Math.abs(-(window.innerHeight * .5) + touch.pageY ) - 200);
+			}}, false);
 			ticker = setInterval( looper, 1000/60 );
 			//在指定周期内不断调用函数			
 		}
