@@ -38,9 +38,9 @@
 		function init()
 		{
 			w = $(window);
-			container = $( '#contentContainer' );
-			carousel = $( '#carouselContainer' );
-			item = $( '.carouselItem' );
+			container = $( '#contentContainer' );//父div
+			carousel = $( '#carouselContainer' );//section
+			item = $( '.carouselItem' );//figure
 			itemLength = $( '.carouselItem' ).length;
 			fps = $('#fps');
 			rY = 360 / itemLength;
@@ -55,11 +55,11 @@
 			for ( var i = 0; i < itemLength; i++ )
 			{
 				var $item = item.eq(i);
-				var $block = $item.find('.carouselItemInner');
+				var $block = $item.find('.carouselItemInner');//div
 				
         //thanks @chrisgannon!        
         TweenMax.set($item, {rotationY:rY * i, z:radius, transformOrigin:"50% 50% " + -radius + "px"});
-				
+				//旋转角度 3d 基点位置
 				animateIn( $item, $block )						
 			}
 			
