@@ -25,29 +25,29 @@ body{
 	{
 		position:absolute;
 		left:50%;  
-		top:50%;  
+		top:30%;  
 	}
 	
 	#carouselContainer
 	{
 		position:absolute;
 		left:50%;  
-		top:50%;  
+		top:30%;  
 	}
 	}
 	
 	.carouselItem
 	{
-		width:300px;
-		height:500px;
+		width:150px;
+		height:250px;
 		position:absolute;
 		visibility:hidden;
 	}
 	
 	.carouselItemInner
 	{
-		width:300px;
-		height:500px;
+		width:150px;
+		height:250px;
 		position:absolute;
 		text-align:center;
 		
