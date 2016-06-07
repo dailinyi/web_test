@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>jQuery自动播放的照片墙特效</title>
+    <link href="css/index1.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/default.css">
+    <script src="js/jquery.min.js"></script>
+    
+    <script>
+	
+        function Showbigimg() {
+            var rom = parseInt(6 * Math.random());
+            var imgurl = $(".zppic:eq(" + rom + ")").find("img").attr("src");
+            $(".bigimg").attr({ "src": imgurl });
+
+            var bwidth = $(".bigimg").width();
+            var bheight = $(".bigimg").height();
+            var o = { left: "100px", width: "800px", height: "600px", top: "500px"};
+
+            var pic = $(".zppic:eq(" + rom + ")");
+            $(".bigpic").css({ "left": pic.position().left, "top": pic.position().top });
+            $(".bigpic").show()
+
+            $(".bigpic").animate(o, 2000, function () {
+                setTimeout(function () {
+                    $(".bigpic").animate({ width: "100px", left: pic.position().left, top: pic.position().top, "margin-left": "0", "margin-top": "0" ,transform:rotate(30)}, 1000, function () {
+                        $(".bigpic").hide();
+                        setTimeout(Showbigimg, 1000);
+                    });
+                }, 1000)
+            });
+        }
+
+        $(function () {
+            Showbigimg();         
+
+        })
+    </script>
+</head>
+<body>
+    <div class="zp">  
+        <div class="zppic">
+            <img src="images/1.jpg" />
+        </div>
+        <div class="zppic">
+            <img src="images/1.jpg" />
+        </div>
+        <div class="zppic">
+            <img src="images/1.jpg" />
+        </div>
+        <div class="zppic">
+            <img src="images/1.jpg" />
+        </div>
+        <div class="zppic">
+            <img src="images/1.jpg" />
+        </div>
+        <div class="zppic">
+            <img src="images/1.jpg" />
+        </div>
+
+        <div class="bigpic" style="display: none;">
+            <img class="bigimg" src="" />
+        </div>
+    </div>
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+</div>
+</body>
+</html>
+
