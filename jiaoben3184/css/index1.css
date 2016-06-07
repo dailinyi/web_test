@@ -4,6 +4,9 @@ body{
 		height: 100%;
 		background-color: #5569ae;
 		overflow: hidden;
+		background-repeat:no-repeat;
+		background-image:url(../images/bj.jpg);
+		background-size:cover;
 		
 	}
 	.snow-container{position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 100001;}
