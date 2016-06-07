@@ -1,4 +1,4 @@
-﻿body { position: absolute; overflow:hidden;}
+﻿body { position: relative; overflow:hidden;}
 body{
 		width: 100%;
 		height: 100%;
@@ -15,7 +15,7 @@ body{
     .zppic img { width: 100%; }
 
 
-.bigpic { position: absolute; overflow: hidden; z-index: 99; width: 0px;}
+.bigpic { position: absolute; overflow: hidden; z-index: 99; }
     .bigpic img { width: 100%; }
 
 table { width:100%;}
