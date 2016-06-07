@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>图片3D旋转效果切换</title>
+<script src="http://libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="dist/jR3DCarousel.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	var slides = [{src: 'images/51501.jpg'}, {src: 'images/51502.jpg'}, {src: 'images/51503.jpg'}, {src: 'images/51504.jpg'},{src: 'images/51505.jpg'}, {src: 'images/51506.jpg'}]
+	var jR3DCarousel;
+	var carouselProps =  {
+			 		  width: 400, 				/* largest allowed width */
+					  height: 222, 				/* largest allowed height */
+					  slideLayout : 'fill',     /* "contain" (fit according to aspect ratio), "fill" (stretches object to fill) and "cover" (overflows box but maintains ratio) */
+					  animation: 'slide3D', 		/* slide | scroll | fade | zoomInSlide | zoomInScroll */
+					  animationCurve: 'ease',
+					  animationDuration: 2000,
+					  animationInterval: 2000,
+					  //slideClass: 'jR3DCarouselCustomSlide',
+					  autoplay: true,
+					  onSlideShow: show,		/* callback when Slide show event occurs */
+					  navigation: null,	/* circles | squares */
+					  slides: slides 			/* array of images source or gets slides by 'slide' class */
+						  
+				}
+	function setUp(){
+ 		jR3DCarousel = $('.jR3DCarouselGallery').jR3DCarousel(carouselProps);
+
+		$('.settings').html('<pre>$(".jR3DCarouselGallery").jR3DCarousel('+JSON.stringify(carouselProps, null, 4)+')</pre>');		
+		
+	}
+	function show(slide){
+		console.log("Slide shown: ", slide.find('img').attr('src'))
+	}
+	$('.carousel-props input').change(function(){
+		if(isNaN(this.value))
+			carouselProps[this.name] = this.value || null; 
+		else
+			carouselProps[this.name] = Number(this.value) || null; 
+		
+		for(var i = 0; i < 999; i++)
+	     clearInterval(i);
+		$('.jR3DCarouselGallery').empty();
+		setUp();
+		jR3DCarousel.showNextSlide();
+	})
+	
+	$('[name=slides]').change(function(){
+		carouselProps[this.name] = getSlides(this.value); 
+		for (var i = 0; i < 999; i++)
+	     clearInterval(i);
+		$('.jR3DCarouselGallery').empty();
+		setUp();
+		jR3DCarousel.showNextSlide();		
+	});
+	
+	function getSlides(no){
+		slides = [];
+		for ( var i = 0; i < no; i++) {
+			slides.push({src: 'https://unsplash.it/'+Math.floor(1366-Math.random()*200)+''+Math.floor(768+Math.random()*200)})
+		}
+		return slides;
+	}
+	
+	//carouselProps.slides = getSlides(7);
+	setUp()
+
+  })
+</script>
+
+<style type="text/css">
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	background: darkcyan;
+}
+
+.container {
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+	overflow: hidden;
+}
+
+.jR3DCarouselGallery,.jR3DCarouselGallery1 {
+	margin: 0 auto; /* optional - if want to center align */
+}
+
+.container {
+	text-align: center;
+}
+
+</style>
+</head>
+
+<body>
+<div class="container">
+	<div>
+		<div class="jR3DCarouselGallery"></div>
+	</div>
+
+ </div>
+</body>
+</html>
+
