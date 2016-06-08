@@ -1,0 +1,110 @@
+﻿body { position:absolute; overflow:hidden;}
+body{
+		width: 100%;
+		height: 100%;
+		background-color: #5569ae;
+		overflow: hidden;
+		background-image:url(../images/bj2.jpg);
+		
+		
+	}
+.zp { width: 100%;position:absolute;}
+.zppic { display: block; max-width: 800px; max-height: 600px;position:relative;right:-2000px;bottom:-2000px;}
+    .zppic img { width: 100%; }
+	
+@keyframes key1
+{
+0% {left:-800px;top:-600px;}
+30% {left:200px;top:600px;transform:rotate(360deg);}
+50% {left:200px;top:600px;transform:rotate(360deg);}
+100% {left:200px;top:600px;transform:rotate(360deg);}
+}
+@keyframes key2
+{
+0% {left:400px;top:600px;}
+10% {left:430px;top:600px;}
+100% {left:-1000px;top:600px;}
+}
+@keyframes key3
+{
+0% {left:-800px;top:-600px;}
+30% {left:100px;top:200px;}
+100% {left:100px;top:200px;}
+}
+@keyframes key4
+{
+0% {left:2000px;top:200px;}
+30% {left:400px;top:200px;}
+100% {left:400px;top:200px;}
+}
+@keyframes key5
+{
+0% {left:100px;top:200px;}
+100% {left:-1000px;top:200px;}
+}
+@keyframes key6
+{
+0% {left:400px;top:200px;}
+100% {left:2000px;top:500px;}
+}
+@keyframes key7
+{
+0% {left:400px;top:-800px;width:100px;height:100px;opacity:0;}
+100% {left:400px;top:-800px;width:600px;height:500px;opacity:1;}
+}
+@keyframes key8
+{
+0% {left:0px;top:-1000px;width:100px;height:100px;opacity:0;}
+100% {left:0px;top:-1000px;width:600px;height:500px;opacity:1;}
+}
+@keyframes key9
+{
+0% {left:700px;top:-1500px;width:100px;height:100px;opacity:0;}
+100% {left:700px;top:-1500px;width:600px;height:500px;opacity:1;}
+}
+@keyframes key10
+{
+0% {left:400px;top:-1700px;width:100px;height:100px;opacity:0;}
+100% {left:400px;top:-1700px;width:600px;height:500px;opacity:1;}
+}
+
+.item1
+{
+animation: key1 5s linear 2s alternate forwards;
+}
+.item2
+{
+animation: key2 0.5s linear alternate forwards;
+}
+.item3
+{
+animation: key3 5s linear 2s alternate forwards;
+}
+.item4
+{
+animation: key4 5s linear 2s alternate forwards;
+}
+.item5
+{
+animation: key5 0.5s linear alternate forwards;
+}
+.item6
+{
+animation: key6 0.5s linear alternate forwards;
+}
+.item7
+{
+animation: key7 5s linear 2s alternate forwards;
+}
+.item8
+{
+animation: key8 5s linear 2s alternate forwards;
+}
+.item9
+{
+animation: key9 5s linear 2s alternate forwards;
+}
+.item10
+{
+animation: key10 5s linear 2s alternate forwards;
+}
