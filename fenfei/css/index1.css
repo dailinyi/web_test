@@ -9,7 +9,7 @@ body{
 		
 	}
 .zp { width: 100%;position:absolute;}
-.zppic { display: block; max-width: 800px; max-height: 600px;position:relative;right:-2000px;bottom:-2000px;}
+.zppic { display:inline-block; max-width: 800px; max-height: 600px;position:relative;right:-2000px;bottom:-500px;}
     .zppic img { width: 100%; }
 	
 @keyframes key1

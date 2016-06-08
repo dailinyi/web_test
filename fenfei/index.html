@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>jQuery自动播放的照片墙特效</title>
-    <link href="css/index1.css" rel="stylesheet" />
+    <link href="css/index.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="css/normalize.css" />
 	<link rel="stylesheet" type="text/css" href="css/default.css">
     <script src="js/jquery.min.js"></script>
@@ -50,6 +50,12 @@
 				$('.zppic:eq(4)').addClass("item8");
 				$('.zppic:eq(5)').addClass("item9");
 				$('.zppic:eq(6)').addClass("item10");
+			});
+			$('.zppic:eq(3)').delay(18000).queue(function(){
+				$('.zppic:eq(3)').addClass("item11");
+				$('.zppic:eq(4)').addClass("item12");
+				$('.zppic:eq(5)').addClass("item13");
+				$('.zppic:eq(6)').addClass("item14");
 			});
 			 //setTimeout($('#item1').addClass("item2"), 1000);
 			}) 
