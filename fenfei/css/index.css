@@ -1,111 +1,126 @@
-body { position:absolute; overflow:hidden;}
 body{
+		position:absolute;
 		width: 100%;
 		height: 100%;
-		background-color: #5569ae;
 		overflow: hidden;
-		background-image:url(../images/bj2.jpg);
-		background-size:cover;
 		
 		
 	}
 .zp { width: 100%;}
-.zppic { display: inline-block; max-width: 800px; max-height: 600px;position:absolute;opacity:0;}
-.zppic img { width: 100%; }
+.zppic { display: inline-block; width: 600px; height: 600px;position:absolute;opacity:0;}
+.zppic img { width: 100%; border:10px solid #FFF;}
 	
 @keyframes key1
 {
-0% {left:-800px;top:-600px;opacity:0;}
-30% {left:100px;top:600px;transform:rotate(360deg);opacity:1;}
-50% {left:100px;top:600px;transform:rotate(360deg);opacity:1;}
-100% {left:100px;top:600px;transform:rotate(360deg);opacity:1;}
+0% {left:-600px;top:-600px;opacity:0;}
+30% {left:180px;top:600px;transform:rotate(360deg);opacity:1;}
+50% {left:180px;top:600px;transform:rotate(360deg);opacity:1;}
+100% {left:180px;top:600px;transform:rotate(360deg);opacity:1;}
 }
 @keyframes key2
 {
-0% {left:100px;top:600px;opacity:1;}
-10% {left:150px;top:600px;opacity:1;}
-100% {left:-800px;top:600px;opacity:1;}
+0% {left:180px;top:600px;opacity:1;}
+10% {left:230px;top:600px;opacity:1;}
+100% {left:-600px;top:600px;opacity:1;}
 }
 @keyframes key3
 {
-0% {left:-800px;top:-600px;opacity:0;}
-30% {left:50px;top:300px;opacity:1;}
-100% {left:50px;top:300px;opacity:1;}
+0% {left:-600px;top:-600px;opacity:0;}
+30% {left:100px;top:300px;opacity:1;}
+100% {left:100px;top:300px;opacity:1;}
 }
 @keyframes key4
 {
-0% {left:2000px;top:700px;opacity:0;}
-30% {left:150px;top:700px;opacity:1;}
-100% {left:150px;top:700px;opacity:1;}
+0% {left:-600px;top:1200px;opacity:0;}
+30% {left:380px;top:700px;opacity:1;}
+100% {left:380px;top:700px;opacity:1;}
 }
 @keyframes key5
 {
-0% {left:50px;top:300px;opacity:1;}
-30% {left:50px;top:350px;opacity:1;}
-100% {left:50px;top:-600px;opacity:1;}
+0% {left:100px;top:300px;opacity:1;}
+30% {left:100px;top:350px;opacity:1;}
+100% {left:100px;top:-600px;opacity:1;}
 }
 @keyframes key6
 {
-0% {left:150px;top:700px;opacity:1;}
-30% {left:150px;top:650px;opacity:1;}
-100% {left:150px;top:2000px;opacity:1;}
+0% {left:380px;top:700px;opacity:1;}
+30% {left:380px;top:650px;opacity:1;}
+100% {left:380px;top:2000px;opacity:1;}
 }
+
+
 @keyframes key7
 {
-0% {left:200px;top:300px;width:100px;height:100px;opacity:0;}
-100% {left:200px;top:300px;width:600px;height:500px;opacity:1;}
+0% {left:350px;top:0px;width:100px;height:100px;opacity:0;}
+100% {left:350px;top:300px;width:300px;height:300px;opacity:1;}
 }
 @keyframes key8
 {
-0% {left:50px;top:600px;width:100px;height:100px;opacity:0;}
-100% {left:50px;top:600px;width:600px;height:500px;opacity:1;}
+0% {left:0px;top:700px;width:100px;height:100px;opacity:0;}
+100% {left:50px;top:700px;width:300px;height:300px;opacity:1;}
 }
 @keyframes key9
 {
-0% {left:350px;top:900px;width:100px;height:100px;opacity:0;}
-100% {left:350px;top:900px;width:600px;height:500px;opacity:1;}
+0% {left:650px;top:700px;width:100px;height:100px;opacity:0;}
+20% {left:650px;top:700px;width:100px;height:100px;opacity:0;}
+100% {left:600px;top:700px;width:300px;height:300px;opacity:1;}
 }
 @keyframes key10
 {
-0% {left:200px;top:1200px;width:100px;height:100px;opacity:0;}
-100% {left:200px;top:1200px;width:600px;height:500px;opacity:1;}
+0% {left:350px;top:1500px;width:100px;height:100px;opacity:0;}
+100% {left:350px;top:1100px;width:300px;height:300px;opacity:1;}
 }
 @keyframes key11
 {
-0% {left:200px;top:300px;transform:rotate(0deg);width:600px;height:500px;opacity:1;}
-100% {left:200px;top:300px;transform:rotate(360deg);width:0px;height:0px;opacity:0;}
+0% {left:350px;top:300px;transform:rotate(0deg);width:300px;height:300px;opacity:1;}
+100% {left:350px;top:0px;transform:rotate(360deg);width:0px;height:0px;opacity:0;}
 }
 @keyframes key12
 {
-0% {left:50px;top:600px;transform:rotate(0deg);width:600px;height:500px;opacity:1;}
-100% {left:50px;top:800px;transform:rotate(180deg);width:0px;height:0px;opacity:0;}
+0% {left:50px;top:700px;transform:rotate(0deg);width:300px;height:300px;opacity:1;}
+100% {left:0px;top:700px;transform:rotate(180deg);width:0px;height:0px;opacity:0;}
 }
 @keyframes key13
 {
-0% {left:350px;top:900px;transform:rotate(0deg);width:600px;height:500px;opacity:1;}
-100% {left:700px;top:900px;transform:rotate(180deg);width:0px;height:0px;opacity:0;}
+0% {left:650px;top:700px;transform:rotate(0deg);width:300px;height:300px;opacity:1;}
+100% {left:600px;top:700px;transform:rotate(180deg);width:0px;height:0px;opacity:0;}
 }
 @keyframes key14
 {
-0% {left:200px;top:1200px;transform:rotate(0deg);width:600px;height:500px;opacity:1;}
-100% {left:400px;top:1200px;transform:rotate(360deg);width:0px;height:0px;opacity:0;}
+0% {left:350px;top:1100px;transform:rotate(0deg);width:300px;height:300px;opacity:1;}
+100% {left:350px;top:1500px;transform:rotate(360deg);width:0px;height:0px;opacity:0;}
 }
 
 .item1
 {
+	width:600px;
+	height:600px;
 animation: key1 5s linear 2s alternate forwards;
+}
+.item1 img{
+	width:600px;
+	height:600px;
 }
 .item2
 {
 animation: key2 0.5s linear alternate forwards;
 }
+
 .item3
 {
 animation: key3 5s linear 2s alternate forwards;
 }
+.item3 img{
+	width:500px;
+	height:500px;
+}
 .item4
 {
 animation: key4 5s linear 2s alternate forwards;
+}
+.item4 img{
+	width:500px;
+	height:500px;
 }
 .item5
 {
@@ -115,21 +130,38 @@ animation: key5 0.5s linear alternate forwards;
 {
 animation: key6 0.5s linear alternate forwards;
 }
+
 .item7
 {
 animation: key7 3s linear 2s alternate forwards;
+}
+.item7 img{
+	width:300px;
+	height:300px;
 }
 .item8
 {
 animation: key8 3s linear 2s alternate forwards;
 }
+.item8 img{
+	width:300px;
+	height:300px;
+}
 .item9
 {
 animation: key9 3s linear 2s alternate forwards;
 }
+.item9 img{
+	width:300px;
+	height:300px;
+}
 .item10
 {
 animation: key10 3s linear 2s alternate forwards;
+}
+.item10 img{
+	width:300px;
+	height:300px;
 }
 .item11
 {

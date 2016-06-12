@@ -2,94 +2,140 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>jQuery自动播放的照片墙特效</title>
+    <title>自动播放的照片墙特效</title>
     <link href="css/index.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="css/normalize.css" />
 	<link rel="stylesheet" type="text/css" href="css/default.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
     <script src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+<script type="text/javascript" src="js/pngFix.js"></script>
+<script type="text/javascript">
+  DD_belatedPNG.fix('.png-fix');
+</script>
     
     <script>
 	
-        function Showbigimg() {
+        function Show() {
             var rom = parseInt(7 * Math.random());
-
-            var imgurl = $(".zppic:eq(" + rom + ")").find("img").attr("src");
-            $(".bigimg").attr({ "src": imgurl });
-
-            var bwidth = $(".bigimg").width();
-            var bheight = $(".bigimg").height();
-            var o = { left: "100px", width: "800px", height: "600px", top: "500px"};
-
-            var pic = $(".zppic:eq(" + rom + ")");
-            $(".bigpic").css({ "left": pic.position().left, "top": pic.position().top });
-            $(".bigpic").show();
-
-            $(".bigpic").animate(o, 2000, function () {
-                setTimeout(function () {
-                    $(".bigpic").animate({ width: "100px", left: pic.position().left, top: pic.position().top, "margin-left": "0", "margin-top": "0" }, 1000, function () {
-                        $(".bigpic").hide();
-                        setTimeout(Showbigimg, 1000);
-                    });
-                }, 1000)
-            });
+			var eq0=$(".zppic:eq(" + rom + ")");//初始化
+			console.log(rom);
+			var eq1=eq0.next();
+			var eq2=eq1.next();
+			var eq3=eq2.next();
+			var eq4=eq3.next();
+			var eq5=eq4.next();
+			var eq6=eq5.next();
+			switch(rom)//判断哪个图片先开始
+			{
+			 case 1:
+			  {
+			 	 eq6=$('.zppic:eq(0)');
+			  	 break;
+			  }
+			 case 2:
+			  {
+			 	 eq5=$('.zppic:eq(0)');
+				 var eq6=eq5.next();
+			  	 break;
+			  }
+			 case 3:
+			  {
+			     eq4=$('.zppic:eq(0)');
+				 var eq5=eq4.next();
+				 var eq6=eq5.next();
+			  	 break;
+			  }
+			  case 4:
+			  {
+			     eq3=$('.zppic:eq(0)');
+				 var eq4=eq3.next();
+				 var eq5=eq4.next();
+				 var eq6=eq5.next();
+			  	 break;
+			  }
+			 case 5:
+			  {
+			     eq2=$('.zppic:eq(0)');
+				 var eq3=eq2.next();
+				 var eq4=eq3.next();
+				 var eq5=eq4.next();
+				 var eq6=eq5.next();
+			  	 break;
+			  }
+			 case 6:
+		      {
+		         eq1=$('.zppic:eq(0)');
+				 var eq2=eq1.next();
+				 var eq3=eq2.next();
+				 var eq4=eq3.next();
+				 var eq5=eq4.next();
+				 var eq6=eq5.next();
+			  	 break;
+		      }
+				
+			} 
+			$(".zppic").removeClass("item1 item2 item3 item4 item5 item6 item7 item11 item8 item12 item9 item13 item10 item14");//清除样式
+			eq0.addClass("item1");//添加样式
+			eq0.delay(5000).queue(function(){
+				eq0.addClass("item2");
+				eq1.addClass("item3");
+				eq2.addClass("item4");
+				$(this).dequeue();
+			});
+			eq1.delay(10000).queue(function(){
+				eq1.addClass("item5");
+				eq2.addClass("item6");
+				eq3.addClass("item7");
+				eq4.addClass("item8");
+				eq5.addClass("item9");
+				eq6.addClass("item10");
+				$(this).dequeue();
+			});
+			eq2.delay(16000).queue(function(){
+				eq3.addClass("item11");
+				eq4.addClass("item12");
+				eq5.addClass("item13");
+				eq6.addClass("item14");
+				$(this).dequeue();
+			});
+			eq3.delay(18000).queue(function(){//循环调用函数
+				Show();
+				$(this).dequeue();
+			});
         }
 
         $(function () {
-            //Showbigimg();   
-			$('.zppic:eq(0)').addClass("item1");
-			 //setTimeout($('#item1').addClass("item2"), 1000);
-			 $('.zppic:eq(0)').delay(5000).queue(function(){
-				$('.zppic:eq(0)').addClass("item2");
-				$('.zppic:eq(1)').addClass("item3");
-				$('.zppic:eq(2)').addClass("item4");
-			});
-			$('.zppic:eq(2)').delay(10000).queue(function(){
-				$('.zppic:eq(1)').addClass("item5");
-				$('.zppic:eq(2)').addClass("item6");
-				$('.zppic:eq(3)').addClass("item7");
-				$('.zppic:eq(4)').addClass("item8");
-				$('.zppic:eq(5)').addClass("item9");
-				$('.zppic:eq(6)').addClass("item10");
-			});
-			$('.zppic:eq(3)').delay(16000).queue(function(){
-				$('.zppic:eq(3)').addClass("item11");
-				$('.zppic:eq(4)').addClass("item12");
-				$('.zppic:eq(5)').addClass("item13");
-				$('.zppic:eq(6)').addClass("item14");
-			});
-			 //setTimeout($('#item1').addClass("item2"), 1000);
-			}) 
+           Show();
+		}) 
     </script>
-    <style type="text/css">
-	.ss{
-		transfrom:rotate(7deg);
-		top:200px;
-		left:20px;
-	}
-	</style>
 </head>
 <body>	
+<div id="container">
+    <div id="overlay" class="png-fix">
+    </div>
+</div>
     <div class="zp">
-        <div class="zppic" id="item1">
-            <img src="images/1.jpg" />
-        </div>
         <div class="zppic">
             <img src="images/1.jpg" />
         </div>
         <div class="zppic">
-            <img src="images/1.jpg" />
+            <img src="images/2.jpg" />
         </div>
         <div class="zppic">
-            <img src="images/1.jpg" />
+            <img src="images/3.jpg" />
         </div>
         <div class="zppic">
-            <img src="images/1.jpg" />
+            <img src="images/4.jpg" />
         </div>
         <div class="zppic">
-            <img src="images/1.jpg" />
+            <img src="images/5.jpg" />
         </div>
         <div class="zppic">
-            <img src="images/1.jpg" />
+            <img src="images/6.jpg" />
+        </div>
+        <div class="zppic">
+            <img src="images/7.jpg" />
         </div>
     </div>
 </div>
