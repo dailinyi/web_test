@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>百叶窗效果切换</title>
+
+<link rel="stylesheet" href="css/base.css" />
+<link rel="stylesheet" type="text/css" href="css/default.css">
+<link rel="stylesheet" href="css/osSlider.css" />
+<style type="text/css">
+	body{
+		width: 100%;
+		height: 100%;
+		background-color: #5569ae;
+		overflow: hidden;
+	}
+	.snow-container{position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 100001;}
+	.border{
+		position:absolute;
+		z-index:100;
+		background-image:url(images/snow.png);
+		background-repeat:repeat;
+	}
+	.border-left{
+		width:50px;
+		height:100%;
+	}
+	.border-right{
+		width:50px;
+		height:100%;
+		right:0px;
+	}
+	.border-top{
+		width:100%;
+		height:50px;	
+	}
+	.border-bottom{
+		width:100%;
+		height:50px;
+		bottom:0px;
+	}
+	</style>
+</head>
+<body>
+<div class="snow-container"></div>
+<div class="htmleaf-container">
+	<div class="slider">
+    <div class="border border-left">
+    </div>
+     <div class="border border-right">
+    </div>
+     <div class="border border-top">
+    </div>
+     <div class="border border-bottom">
+    </div>
+   
+		<ul class="slider-main">
+			<li>
+				<img src="images/1.jpg" alt="">
+			</li>
+			<li>
+				<img src="images/2.jpg" alt="">
+			</li>
+			<li>
+				<img src="images/3.jpg" alt="">
+			</li>
+			<li>
+				<img src="images/4.jpg" alt="">
+			</li>
+		</ul>
+        
+        
+      
+	</div>
+</div>
+<script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
+<script src="js/osSlider.js"></script>
+<script type="text/javascript">
+$(function(){
+$('.htmleaf-container').height($(window).height());
+    $('.htmleaf-container').width($(window).width());
+    $('.slider').height($(window).height());
+    $('.slider').width($(window).width());
+	$('li').height($(window).height());
+    $('li').width($(window).width());
+	$('li img').height($(window).height());
+    $('li img').width($(window).width());
+});
+	var slider = new osSlider({ //开始创建效果
+		pNode:'.slider', //容器的选择器 必填
+		cNode:'.slider-main li', //轮播体的选择器 必填
+		speed:3000, //速度 默认3000 可不填写
+		autoPlay:true //是否自动播放 默认true 可不填写
+	});
+	
+</script>
+	<script type="text/javascript" src="js/three.js"></script>
+	
+	<script type="text/javascript" src="js/bg.js"></script>
+</div>
+</body>
+</html>
