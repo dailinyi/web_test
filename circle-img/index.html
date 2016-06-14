@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/index.css" rel="stylesheet" />
+    <title>五彩小圆圈背景特效</title>
+    <style type="text/css">	
+        body
+        {
+            margin: 0;
+            overflow: hidden;
+            background: #E9E9E9;
+        }
+        
+        .zppic,img
+        {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            width: 150px;
+            height:150px;
+            border-radius: 150px;
+            background: url('1.jpg');
+        }
+        
+        .zppic:before
+        {
+            content: '';
+            position: absolute;
+            top: -8px;
+            left: -8px;
+            width: 162px;
+            height:162px;
+            border-radius: 162px;
+            border: 2px solid #BCBCBC;
+        }
+        
+        .zppic:after
+        {
+            content: '';
+            position: absolute;
+            top: -13px;
+            left: -13px;
+            width: 172px;
+            height: 172px;
+            border-radius: 172px;
+            border: 2px solid #FF9900;
+        }
+		.item{
+			position: absolute;
+			top:30%;
+			left:20%;
+			width: 75px;
+            height:75px;
+            border-radius: 75px;
+		}
+    </style>
+    <script src="js/jquery.min.js"></script>
+    <script type="application/javascript">
+	 function Show() {
+            var rom = parseInt(7 * Math.random());
+			var eq0=$(".zppic:eq(" + rom + ")");//初始化
+			var eq1=eq0.next();
+			var eq2=eq1.next();
+			var eq3=eq2.next();
+			var eq4=eq3.next();
+			var eq5=eq4.next();
+			var eq6=eq5.next();
+			switch(rom)//判断哪个图片先开始
+			{
+			 case 1:
+			  {
+			 	 eq6=$('.zppic:eq(0)');
+			  	 break;
+			  }
+			 case 2:
+			  {
+			 	 eq5=$('.zppic:eq(0)');
+				 var eq6=eq5.next();
+			  	 break;
+			  }
+			 case 3:
+			  {
+			     eq4=$('.zppic:eq(0)');
+				 var eq5=eq4.next();
+				 var eq6=eq5.next();
+			  	 break;
+			  }
+			  case 4:
+			  {
+			     eq3=$('.zppic:eq(0)');
+				 var eq4=eq3.next();
+				 var eq5=eq4.next();
+				 var eq6=eq5.next();
+			  	 break;
+			  }
+			 case 5:
+			  {
+			     eq2=$('.zppic:eq(0)');
+				 var eq3=eq2.next();
+				 var eq4=eq3.next();
+				 var eq5=eq4.next();
+				 var eq6=eq5.next();
+			  	 break;
+			  }
+			 case 6:
+		      {
+		         eq1=$('.zppic:eq(0)');
+				 var eq2=eq1.next();
+				 var eq3=eq2.next();
+				 var eq4=eq3.next();
+				 var eq5=eq4.next();
+				 var eq6=eq5.next();
+			  	 break;
+		      }
+				
+			} 
+			$(".zppic").removeClass("item1 item2 item3 item4 item5 item6 item7 item11 item21 item31 item41 item51 item61 item71 item8 item81 item82");//清除样式
+			eq0.addClass("item1");//添加样式
+			eq1.addClass("item2");
+			eq2.addClass("item3");
+			eq3.addClass("item4");
+			eq4.addClass("item5");
+			eq5.addClass("item6");
+			eq6.addClass("item7");
+			eq0.delay(6000).queue(function(){
+				eq0.addClass("item11");
+				$(this).dequeue();
+			});
+			
+			eq1.delay(11000).queue(function(){
+				eq1.addClass("item21");
+				$(this).dequeue();
+			});
+			eq2.delay(16000).queue(function(){
+				eq2.addClass("item31");
+				$(this).dequeue();
+			});
+			eq3.delay(21000).queue(function(){
+				eq3.addClass("item41");
+				$(this).dequeue();
+			});
+			eq4.delay(26000).queue(function(){
+				eq4.addClass("item51");
+				$(this).dequeue();
+			});
+			eq5.delay(31000).queue(function(){
+				eq5.addClass("item61");
+				$(this).dequeue();
+			});
+			eq6.delay(36000).queue(function(){
+				eq6.addClass("item71");
+				$(this).dequeue();
+			});
+			eq0.delay(36000).queue(function(){
+				eq0.addClass("item81");
+				eq1.addClass("item81");
+				eq2.addClass("item81");
+				eq3.addClass("item8");
+				eq4.addClass("item8");
+				eq5.addClass("item8");
+				eq6.addClass("item82");
+				$(this).dequeue();
+			});
+			eq1.delay(36000).queue(function(){//循环调用函数
+				Show();
+				$(this).dequeue();
+			});
+        }
+
+        $(function () {
+           Show();
+		}) 
+	</script>
+    
+</head>
+<body>
+    <canvas>
+    </canvas>
+    <div class="zppic">
+    <img src="images/1.jpg" alt="" />
+    </div>
+    <div class="zppic">
+    <img src="images/2.jpg" alt="" />
+    </div>
+    <div class="zppic">
+    <img src="images/3.jpg" alt="" />
+    </div>
+    <div class="zppic">
+    <img src="images/4.jpg" alt="" />
+    </div>
+    <div class="zppic">
+    <img src="images/5.jpg" alt="" />
+    </div>
+    <div class="zppic">
+    <img src="images/6.jpg" alt="" />
+    </div>
+    <div class="zppic">
+    <img src="images/7.jpg" alt="" />
+    </div>
+    <script src='js/zepto.min.js'></script>
+    <script>        
+		var canvas = $('canvas')[0];
+        var context = canvas.getContext('2d');
+
+        function Dot() {
+            this.alive = true;
+            this.x = Math.round(Math.random() * canvas.width);
+            this.y = Math.round(Math.random() * canvas.height);
+            this.diameter = Math.random() * 7;
+            this.colorIndex = Math.round(Math.random() * 3);
+            this.colorArray = ['rgba(255,153,0,', 'rgba(66,66,66,', 'rgba(188,188,188,', 'rgba(50,153,187,'];
+            this.alpha = 0.1;
+            this.color = this.colorArray[this.colorIndex] + this.alpha + ')';
+
+            this.velocity = { x: Math.round(Math.random() < 0.5 ? -1 : 1) * Math.random() * 0.7, y: Math.round(Math.random() < 0.5 ? -1 : 1) * Math.random() * 0.7 };
+        }
+
+        Dot.prototype = {
+            Draw: function () {
+                context.fillStyle = this.color;
+                context.beginPath();
+                context.arc(this.x, this.y, this.diameter, 0, Math.PI * 2, false);
+                context.fill();
+            },
+
+            Update: function () {
+                if (this.alpha < 0.8) {
+                    console.log(this.color);
+                    this.alpha += 0.01;
+                    this.color = this.colorArray[this.colorIndex] + this.alpha + ')';
+                    console.log('===' + this.color);
+                }
+
+                this.x += this.velocity.x;
+                this.y += this.velocity.y;
+
+                if (this.x > canvas.width + 5 || this.x < 0 - 5 || this.y > canvas.height + 5 || this.y < 0 - 5) {
+                    this.alive = false;
+                }
+            }
+        };
+
+        var EntityArray = [];
+
+        function Initialize() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            for (var x = 0; x < 100; x++) {
+                EntityArray.push(new Dot());
+            }
+
+            Update();
+        }
+
+        function Update() {
+            if (EntityArray.length < 100) {
+                for (var x = EntityArray.length; x < 100; x++) {
+                    EntityArray.push(new Dot());
+                }
+            }
+
+            EntityArray.forEach(function (dot) {
+                dot.Update();
+            });
+
+            EntityArray = EntityArray.filter(function (dot) {
+                return dot.alive;
+            });
+
+            Draw();
+
+            requestAnimationFrame(Update);
+        }
+
+        function Draw() {
+            context.clearRect(0, 0, canvas.width, canvas.height);
+            EntityArray.forEach(function (dot) {
+                dot.Draw();
+            });
+        }
+
+        $(window).resize(function () {
+            EntityArray = [];
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+
+        Initialize(); //@ sourceURL=pen.js
+    </script>
+</body>
+</html>

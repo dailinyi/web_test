@@ -1,0 +1,157 @@
+@keyframes key1
+{
+0% {left:50%;top:50%;opacity:1;}
+100% {left:50%;top:-50%;transform:rotate(180deg);opacity:0;}
+}
+@keyframes key11
+{
+0% {left:50%;top:-50%;opacity:0;}
+100% {left:50%;top:50%;transform:rotate(90deg);opacity:1;}
+}
+@keyframes key2
+{
+0% {left:50%;top:50%;opacity:1;}
+100% {left:-50%;top:-50%;transform:rotate(180deg);opacity:0;}
+}
+@keyframes key21
+{
+0% {left:-50%;top:-50%;opacity:0;}
+100% {left:50%;top:50%;transform:rotateY(180deg);opacity:1;}
+}
+@keyframes key3
+{
+0% {left:50%;top:50%;opacity:1;}
+100% {left:-50%;top:20%;transform:rotate(180deg);opacity:0;}
+}
+@keyframes key31
+{
+0% {left:-50%;top:20%;opacity:0;}
+100% {left:50%;top:50%;transform:rotateX(180deg);opacity:1;}
+}
+@keyframes key4
+{
+0% {left:50%;top:50%;opacity:1;}
+100% {left:-50%;top:80%;transform:rotate(180deg);opacity:0;}
+}
+@keyframes key41
+{
+0% {left:-50%;top:80%;opacity:0;}
+100% {left:20%;top:10%;transform:rotate(90deg);opacity:1;}
+}
+@keyframes key5
+{
+0% {left:50%;top:50%;opacity:1;}
+100% {left:30%;top:100%;transform:rotate(180deg);opacity:0;}
+}
+@keyframes key51
+{
+0% {left:30%;top:100%;opacity:0;}
+100% {left:20%;top:10%;transform:rotateX(180deg);opacity:1;}
+}
+@keyframes key6
+{
+0% {left:50%;top:50%;opacity:1;}
+100% {left:100%;top:60%;transform:rotate(180deg);opacity:0;}
+}
+@keyframes key61
+{
+0% {left:100%;top:60%;opacity:0;}
+100% {left:20%;top:10%;transform:rotateY(180deg);opacity:1;}
+}
+@keyframes key7
+{
+0% {left:50%;top:50%;opacity:1;}
+100% {left:100%;top:0%;transform:rotate(180deg);opacity:0;}
+}
+@keyframes key71
+{
+0% {left:100%;top:0%;opacity:0;}
+100% {left:35%;top:35%;transform:rotateY(180deg);opacity:1;}
+}
+@keyframes key8
+{
+0% {left:20%;top:10%;transform:rotate(180deg);}
+100% {left:50%;top:50%;}
+}
+@keyframes key81
+{
+0% {left:50%;top:50%;transform:rotate(180deg);}
+100% {left:50%;top:50%;}
+}
+@keyframes key82
+{
+0% {left:35%;top:35%;transform:rotateY(180deg);}
+100% {left:50%;top:50%;}
+}
+
+
+.item1
+{
+	animation: key1 5s linear 2s alternate forwards;
+}
+.item11
+{
+	animation: key11 5s linear alternate forwards;
+}
+
+.item2
+{
+	animation: key2 5s linear 2s alternate forwards;
+}
+.item21
+{
+	animation: key21 5s linear alternate forwards;
+}
+
+.item3
+{
+	animation: key3 5s linear 2s alternate forwards;
+}
+.item31
+{
+	animation: key31 5s linear alternate forwards;
+}
+.item4
+{
+	animation: key4 5s linear 2s alternate forwards;
+}
+.item41
+{
+	animation: key41 5s linear alternate forwards;
+}
+.item5
+{
+	animation: key5 5s linear 2s alternate forwards;
+}
+.item51
+{
+	animation: key51 5s linear alternate forwards;
+}
+.item6
+{
+	animation: key6 5s linear 2s alternate forwards;
+}
+.item61
+{
+	animation: key61 5s linear alternate forwards;
+}
+.item7
+{
+	animation: key7 5s linear 2s alternate forwards;
+}
+.item71
+{
+	animation: key71 5s linear alternate forwards;
+}
+.item8
+{
+	animation: key8 3s linear alternate forwards;
+}
+.item81
+{
+	animation: key81 3s linear alternate forwards;
+}
+.item82
+{
+	animation: key82 3s linear alternate forwards;
+}
