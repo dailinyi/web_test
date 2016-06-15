@@ -9,6 +9,9 @@ var offsetbg = 0;
 
 $(document).ready(
 	function () {
+		document.ontouchstart=function(){
+			return false;
+		}
 		$main = $("#mainBody");
 		$body = $("body");
 		$cloud1 = $("#cloud1");

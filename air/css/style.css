@@ -21,6 +21,7 @@ body{
 	position:absolute;
 	left:100%;
 	border:5px solid #FFF;
+	overflow:hidden;
 }
 .zppic img{
 	width:100%;
