@@ -9,7 +9,7 @@ var offsetbg = 0;
 
 $(document).ready(
 	function () {
-		document.ontouchstart=function(){
+		document.ontouchmove=function(){
 			return false;
 		}
 		$main = $("#mainBody");

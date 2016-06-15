@@ -66,6 +66,9 @@
          <script src="js/html5_3d_animation.js" type="text/javascript"></script>
 		<script type="text/javascript">
 			$(function() {
+				document.ontouchmove=function(){
+					return false;
+				}
 				$('#tulip').width($(window).width());
 				$('#tulip').height($(window).height());
 				$("#html5_3d_animation").html5_3d_animation({
