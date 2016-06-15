@@ -30,7 +30,7 @@ setInterval(function flutter() {
 	if (offset2 >= mainwidth) {
 		 offset2 =  -580;
 	}
-	if (offset <= -480) {
+	if (offset <= -450) {
 		 offset =  100;
 	}
 	offset1 += 1.1;
