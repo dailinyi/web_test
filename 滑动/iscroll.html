@@ -1,0 +1,146 @@
+<!DOCTYPE html>  
+<html>  
+    <head>  
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>  
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>    
+        <title>Wireless</title>  
+    </head>  
+     
+    <script type="text/javascript" src="jquery-1.7.2.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+	$('#wrapper').width($(window).width());
+	$('li').width($(window).width());
+	$('.row').width($(window).width());
+	var $v_li=$("li");
+	var v_width=$(window).width();
+    var len=$v_li.length;
+	console.log(len);
+    var page=1;
+	$("#wrapper").on("touchstart", function(e) {
+		e.preventDefault();
+		startX = e.originalEvent.changedTouches[0].pageX;
+	});
+	$("#wrapper").on("touchmove", function(e) {
+		e.preventDefault();
+		moveEndX = e.originalEvent.changedTouches[0].pageX;
+		X = moveEndX - startX;
+		if ( X > 0 ) {
+			if(!$v_li.is(":animated")){
+				if(page>1){
+					$v_li.animate({left:'+='+v_width},"slow");
+					page--;
+					console.log(page);
+				}
+			}
+		}else if ( X < 0 ) {
+			if(!$v_li.is(":animated")){
+				if(page<len){
+					$v_li.animate({left:'-='+v_width},"slow");
+					page++;
+					console.log(page);
+				}
+			}
+		}
+	});
+});
+</script>
+<style type="text/css">
+* {
+	margin: 0px;
+	padding: 0px;
+}
+#wrapper{
+	overflow:hidden;
+}
+li{
+	position:relative;
+	list-style-type: none;
+	display:table-cell;
+}
+.row{
+	display:block;
+}
+
+</style>
+    <body> 
+<div id="wrapper">
+<ul>
+<li>
+<div class="row">
+          <div class="list">音乐1</div>
+          <div class="list">音乐1</div>
+          <div class="list">音乐1</div>
+          <div class="list">音乐1</div>
+          <div class="list">音乐1</div>
+          <div class="list">音乐1</div>
+          <div class="list">音乐1</div>
+          <div class="list">音乐1</div>
+          <div class="list">音乐1</div>
+          <div class="list">音乐1</div>
+          <div class="list">音乐1</div>
+          <div class="list">音乐1</div>
+          <div class="list">音乐1</div>
+          <div class="list">音乐1</div>
+          <div class="list">音乐1</div></div>
+          </li>
+          <li>
+<div class="row">
+          <div class="list">音乐2</div>
+          <div class="list">音乐1</div>
+          <div class="list">音乐1</div>
+          <div class="list">音乐1</div>
+          <div class="list">音乐1</div>
+          <div class="list">音乐1</div>
+          <div class="list">音乐1</div>
+          <div class="list">音乐1</div>
+          <div class="list">音乐1</div>
+          <div class="list">音乐1</div>
+          <div class="list">音乐1</div>
+          <div class="list">音乐1</div>
+          <div class="list">音乐1</div>
+          <div class="list">音乐1</div>
+          <div class="list">音乐1</div>
+	 </div>
+     </li>
+     <li>
+<div class="row">
+          <div class="list">音乐3</div>
+          <div class="list">音乐1</div>
+          <div class="list">音乐1</div>
+          <div class="list">音乐1</div>
+          <div class="list">音乐1</div>
+          <div class="list">音乐1</div>
+          <div class="list">音乐1</div>
+          <div class="list">音乐1</div>
+          <div class="list">音乐1</div>
+          <div class="list">音乐1</div>
+          <div class="list">音乐1</div>
+          <div class="list">音乐1</div>
+          <div class="list">音乐1</div>
+          <div class="list">音乐1</div>
+          <div class="list">音乐1</div>
+	 </div>
+     </li>
+     <li>
+<div class="row">
+          <div class="list">音乐4</div>
+          <div class="list">音乐1</div>
+          <div class="list">音乐1</div>
+          <div class="list">音乐1</div>
+          <div class="list">音乐1</div>
+          <div class="list">音乐1</div>
+          <div class="list">音乐1</div>
+          <div class="list">音乐1</div>
+          <div class="list">音乐1</div>
+          <div class="list">音乐1</div>
+          <div class="list">音乐1</div>
+          <div class="list">音乐1</div>
+          <div class="list">音乐1</div>
+          <div class="list">音乐1</div>
+          <div class="list">音乐1</div>
+	 </div>
+</li>
+</div>
+    </body>  
+</html>  
