@@ -44,7 +44,7 @@ $(document).ready(function(){
 
 <style type="text/css">
 body {
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family:"Microsoft YaHei","宋体","Segoe UI", "Lucida Grande", Helvetica, Arial,sans-serif, FreeSans, Arimo;
 	font-size: 14px;
 	background: darkcyan;
 	margin:0px;
@@ -75,7 +75,31 @@ to {transform: scale(0.8,0.8);}
 from {transform: scale(0.8,0.8);}
 to {transform: scale(1,1);}
 }
+.foot{
+	position:absolute;
+	width:100%;
+	top:90%;
+	text-align:center;
+	font-size:14px;
+	line-height:30px;
+	left:-3%;
+}
+.foot li{
+	float:left;
+	width:20%;
+	background-image:url(./images/bg1.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center 0;
+	-webkit-background-size: 100%;
+	margin-right:5%;
+	list-style-type:none;
+}
 
+.foot a{
+	color:#FFF;
+	text-decoration:none;
+}
 </style>
 </head>
 
@@ -84,8 +108,15 @@ to {transform: scale(1,1);}
 	<div>
 		<div class="jR3DCarouselGallery"></div>
 	</div>
-
- </div>
+</div>
+<div class="foot">
+    <ul>
+        <li><a href="">选模板</a></li>
+        <li><a href="">选音乐</a></li>
+        <li><a href="">编辑图</a></li>
+        <li><a href="">完 成</a></li>
+    </ul>
+</div>
 </body>
 </html>
 
