@@ -179,3 +179,26 @@ animation: key13 2s linear alternate forwards;
 {
 animation: key14 2s linear alternate forwards;
 }
+.foot{
+	position:absolute;
+	width:100%;
+	margin-top:20%;
+	text-align:center;
+	font-size:14px;
+	line-height:30px;
+}
+.foot li{
+	float:left;
+	width:20%;
+	background-image:url(../images/bg1.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center 0;
+	-webkit-background-size: 100%;
+	margin-left:4%;
+	list-style-type:none;
+}
+
+.foot a{
+	color:#FFF;
+}
