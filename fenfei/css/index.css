@@ -182,10 +182,10 @@ animation: key14 2s linear alternate forwards;
 .foot{
 	position:absolute;
 	width:100%;
-	margin-top:20%;
+	top:70%;
 	text-align:center;
-	font-size:14px;
-	line-height:30px;
+	font-size:40px;
+	line-height:80px;
 }
 .foot li{
 	float:left;
@@ -195,7 +195,7 @@ animation: key14 2s linear alternate forwards;
 	background-size: cover;
 	background-position: center 0;
 	-webkit-background-size: 100%;
-	margin-left:4%;
+	margin-right:5%;
 	list-style-type:none;
 }
 

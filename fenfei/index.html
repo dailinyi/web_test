@@ -8,13 +8,16 @@
 	<link rel="stylesheet" type="text/css" href="css/default.css">
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
     <script src="js/jquery.min.js"></script>
-    
+    <script type="text/javascript" src="js/custom.js"></script>
+	<script type="text/javascript" src="js/pngFix.js"></script>
+    <script type="text/javascript">
+      DD_belatedPNG.fix('.png-fix');
+    </script>
     <script>
 	
         function Show() {
             var rom = parseInt(7 * Math.random());
 			var eq0=$(".zppic:eq(" + rom + ")");//初始化
-			console.log(rom);
 			var eq1=eq0.next();
 			var eq2=eq1.next();
 			var eq3=eq2.next();
@@ -103,38 +106,36 @@
         $(function () {
 			document.ontouchmove=function(){
 				return false;
-				}
+			}
            Show();
 		}) 
     </script>
 </head>
 <body>	
 <div id="container">
-    <div id="overlay" class="png-fix">
-    </div>
+    <div id="overlay" class="png-fix"></div><!--背景-->
 </div>
-    <div class="zp">
-        <div class="zppic">
-            <img src="images/1.jpg" />
-        </div>
-        <div class="zppic">
-            <img src="images/2.jpg" />
-        </div>
-        <div class="zppic">
-            <img src="images/3.jpg" />
-        </div>
-        <div class="zppic">
-            <img src="images/4.jpg" />
-        </div>
-        <div class="zppic">
-            <img src="images/5.jpg" />
-        </div>
-        <div class="zppic">
-            <img src="images/6.jpg" />
-        </div>
-        <div class="zppic">
-            <img src="images/7.jpg" />
-        </div>
+<div class="zp">
+    <div class="zppic">
+        <img src="images/1.jpg" />
+    </div>
+    <div class="zppic">
+        <img src="images/2.jpg" />
+    </div>
+    <div class="zppic">
+        <img src="images/3.jpg" />
+    </div>
+    <div class="zppic">
+        <img src="images/4.jpg" />
+    </div>
+    <div class="zppic">
+        <img src="images/5.jpg" />
+    </div>
+    <div class="zppic">
+        <img src="images/6.jpg" />
+    </div>
+    <div class="zppic">
+        <img src="images/7.jpg" />
     </div>
 </div>
 <div class="foot">
