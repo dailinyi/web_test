@@ -58,13 +58,20 @@ nav{
 .row{
 	display:block;
 }
+.row1{
+	padding:0px 15.5px;
+	display:flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items:center;
+}
 .list{
-	height:66px;
-	border-bottom:1px solid rgb(102,102,102);
-	line-height:66px;
-	padding-left:25.5px;
+	width:30%;
+	float:left;
+	height:150px;
+	border:1px solid rgb(102,102,102);
+	margin-top:15.5px;
 }
 .list img{
-	vertical-align:middle;
-	margin-right:15.5px;
+	width:100%;
 }
