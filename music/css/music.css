@@ -13,7 +13,7 @@ body{
 header{
 	position:fixed;
 	width:100%;
-	z-index:1;
+	z-index:100;
 }
 .head{
 	height:48px;
@@ -37,6 +37,25 @@ nav{
 	padding-left:15.5px;
 	padding-right:15.5px;
 }
+.div-nav{
+	height:42px;
+	background-color:rgb(74,74,74);
+	text-align:center;
+	padding-left:15.5px;
+	padding-right:15.5px;
+	display:flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items:center;
+}
+.swiper-pagination-bullet {
+	width:100%
+   line-height:42px;
+   color: rgb(247,76,69);
+}
+.swiper-pagination-bullet-active{
+	color:#FFF;
+}
 .nav-ul{
 	list-style-type:none;
 	display:flex;
@@ -51,6 +70,11 @@ nav{
 .nav-li a{
 	color: rgb(247,76,69);
 	text-decoration:none;
+}
+.wrap{
+	position:absolute;
+	top:90px;
+	width:100%;
 }
 #wrapper{
 	overflow:hidden;

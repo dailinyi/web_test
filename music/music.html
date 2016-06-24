@@ -5,15 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>音乐列表</title>
-
+    <link rel="stylesheet" href="css/swiper.min.css">
     <link href="css/music.css" rel="stylesheet" />
     <script type="text/javascript" src="js/jquery.min.js""></script>
+    <script src="js/swiper.min.js"></script>
+
     <script type="text/javascript">
-		$(document).ready(function() {
+		/*$(document).ready(function() {
 			$('#wrapper').width($(window).width());
 			$('.wrap-ul li').width($(window).width());
 			$('.row').width($(window).width());
-			var $v_li=$(".wrap-ul li");
+			var $v_li=$(".swiper-slide");
 			var v_width=$(window).width();
 			var r_width=0;
 			var len=$v_li.length;
@@ -30,6 +32,7 @@
 			});
 			
 			//左右切换事件
+			
 			$("#wrapper").on("touchstart", function(e) {
 				e.preventDefault();
 				startX = e.originalEvent.changedTouches[0].pageX;
@@ -60,17 +63,17 @@
 						}
 					}
 				}else{
-					$("#wrapper").unbind('touchstart');
 					$("#wrapper").unbind('touchmove');
 				}
 			});
+			
 			//点击列表音乐选中事件
 			
 			//关闭事件
 			$(".header-right").click(function(){
 				
 			});
-		});
+		});*/
 	</script>
 
   </head>
@@ -82,22 +85,13 @@
              <div class="head-right"><img src="images/close.png" alt="" width="20px" height="20px" /></div>
          </div>
       
-        <nav>
-           <ul class="nav-ul">
-            <li class="nav-li"><a href="#" class="a1" style="color:#FFF">热门</a></li>
-            <li class="nav-li"><a href="#" class="a2">流行</a></li>
-            <li class="nav-li"><a href="#" class="a3">怀旧</a></li>
-            <li class="nav-li"><a href="#" class="a4">伤感</a></li>
-            <li class="nav-li"><a href="#" class="a5">儿歌</a></li>
-            <li class="nav-li"><a href="#" class="a6">安静</a></li>
-            <li class="nav-li"><a href="#" class="a7">思念</a></li>
-            </ul>
-        </nav>
+       <div class="div-nav"></div>
     </header>
-    <div id="wrapper">
-        <ul class="wrap-ul">
-            <li>
-                <div class="row">
+    <div class="swiper-container wrap">
+    
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+            	<div class="row">
                       <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
                       <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
                       <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
@@ -121,9 +115,9 @@
                       <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
                       <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
                  </div>
-             </li>
-             <li>
-                <div class="row">
+             </div>
+            <div class="swiper-slide">
+            	<div class="row">
                       <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐2</span></div>
                       <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
                       <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
@@ -135,10 +129,21 @@
                       <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
                       <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
                       <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
+                      <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
+                      <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
+                      <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
+                      <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
+                      <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
+                      <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
+                      <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
+                      <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
+                      <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
+                      <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
+                      <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
                  </div>
-              </li>
-              <li>
-                <div class="row">
+             </div>
+            <div class="swiper-slide">
+            	<div class="row">
                       <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐3</span></div>
                       <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
                       <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
@@ -150,10 +155,21 @@
                       <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
                       <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
                       <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
+                      <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
+                      <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
+                      <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
+                      <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
+                      <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
+                      <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
+                      <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
+                      <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
+                      <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
+                      <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
+                      <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
                  </div>
-              </li>
-              <li>
-                <div class="row">
+             </div>
+            <div class="swiper-slide">
+            	<div class="row">
                       <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐4</span></div>
                       <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
                       <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
@@ -165,10 +181,21 @@
                       <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
                       <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
                       <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
+                      <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
+                      <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
+                      <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
+                      <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
+                      <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
+                      <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
+                      <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
+                      <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
+                      <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
+                      <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
+                      <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
                  </div>
-            </li>
-            <li>
-                <div class="row">
+             </div>
+            <div class="swiper-slide">
+            	<div class="row">
                       <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐5</span></div>
                       <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
                       <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
@@ -180,10 +207,21 @@
                       <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
                       <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
                       <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
+                      <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
+                      <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
+                      <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
+                      <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
+                      <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
+                      <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
+                      <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
+                      <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
+                      <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
+                      <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
+                      <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
                  </div>
-            </li>
-            <li>
-                <div class="row">
+             </div>
+            <div class="swiper-slide">
+            	<div class="row">
                       <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐6</span></div>
                       <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
                       <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
@@ -195,10 +233,21 @@
                       <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
                       <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
                       <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
+                      <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
+                      <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
+                      <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
+                      <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
+                      <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
+                      <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
+                      <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
+                      <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
+                      <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
+                      <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
+                      <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
                  </div>
-            </li>
-            <li>
-                <div class="row">
+             </div>
+            <div class="swiper-slide">
+            	<div class="row">
                       <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐7</span></div>
                       <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
                       <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
@@ -210,11 +259,45 @@
                       <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
                       <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
                       <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
+                      <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
+                      <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
+                      <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
+                      <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
+                      <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
+                      <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
+                      <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
+                      <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
+                      <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
+                      <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
+                      <div class="list"><img src="images/music.png" alt="" width="18px" height="35px" /><span>音乐1</span></div>
                  </div>
-            </li>
-        </ul>
+             </div>
+        </div>
+         
     </div>
 
+
+    <!-- Initialize Swiper -->
+    <script>
+	var mySwiper = new Swiper('.swiper-container',{
+		pagination: '.div-nav',
+		paginationClickable: true,
+		paginationBulletRender: function (index, className) {
+		switch (index) {
+		  case 0: name='热门';break;
+		  case 1: name='流行';break;
+		  case 2: name='怀旧';break;
+		  case 3: name='伤感';break;
+		  case 4: name='儿歌';break;
+		  case 5: name='安静';break;
+		  case 6: name='思念';break;
+		  default: name='';
+		}
+			  return '<span class="' + className + '">' + name + '</span>';
+		  }
+		})
+    </script>
+    
     <script src="js/jquery.min.js"></script>
   </body>
 </html>
