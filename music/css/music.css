@@ -54,6 +54,8 @@ nav{
 }
 #wrapper{
 	overflow:hidden;
+	position:absolute;
+	top:90px;
 }
 .wrap-ul li{
 	position:relative;

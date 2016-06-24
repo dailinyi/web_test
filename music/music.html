@@ -30,9 +30,8 @@
 			});
 			
 			//左右切换事件
-			/*
 			$("#wrapper").on("touchstart", function(e) {
-				e.preventDefault();
+				//e.preventDefault();
 				startX = e.originalEvent.changedTouches[0].pageX;
 				startY = e.originalEvent.changedTouches[0].pageY;
 			});
@@ -60,18 +59,8 @@
 							page++;
 						}
 					}
-				}else if ( Math.abs(Y) > Math.abs(X) && Y > 0) {
-					if(!$v_li.is(":animated")){
-							$v_li.animate({top:'+='+Y*10},"slow");
-					}
-				}
-				else if ( Math.abs(Y) > Math.abs(X) && Y < 0 ) {
-					if(!$v_li.is(":animated")){
-							$v_li.animate({top:'+='+Y*10},"slow");
-					}
 				}
 			});
-			*/
 			//点击列表音乐选中事件
 			
 			//关闭事件
