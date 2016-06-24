@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <title>音乐列表</title>
     <link rel="stylesheet" href="css/swiper.min.css">
     <link href="css/music.css" rel="stylesheet" />
@@ -282,6 +282,7 @@
 	var mySwiper = new Swiper('.swiper-container',{
 		pagination: '.div-nav',
 		paginationClickable: true,
+		effect : 'slide',
 		paginationBulletRender: function (index, className) {
 		switch (index) {
 		  case 0: name='热门';break;
