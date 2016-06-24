@@ -31,12 +31,12 @@
 			
 			//左右切换事件
 			$("#wrapper").on("touchstart", function(e) {
-				//e.preventDefault();
+				e.preventDefault();
 				startX = e.originalEvent.changedTouches[0].pageX;
 				startY = e.originalEvent.changedTouches[0].pageY;
 			});
 			$("#wrapper").on("touchmove", function(e) {
-				//e.preventDefault();
+				e.preventDefault();
 				moveEndX = e.originalEvent.changedTouches[0].pageX;
 				moveEndY = e.originalEvent.changedTouches[0].pageY;
 				X = moveEndX - startX;
@@ -59,6 +59,9 @@
 							page++;
 						}
 					}
+				}else{
+					$("#wrapper").unbind('touchstart');
+					$("#wrapper").unbind('touchmove');
 				}
 			});
 			//点击列表音乐选中事件
