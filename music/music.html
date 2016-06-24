@@ -36,7 +36,7 @@
 				startY = e.originalEvent.changedTouches[0].pageY;
 			});
 			$("#wrapper").on("touchmove", function(e) {
-				e.preventDefault();
+				//e.preventDefault();
 				moveEndX = e.originalEvent.changedTouches[0].pageX;
 				moveEndY = e.originalEvent.changedTouches[0].pageY;
 				X = moveEndX - startX;
