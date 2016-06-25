@@ -87,14 +87,14 @@ nav{
 	text-align:center;
 	color:#FFF;
 	line-height:39px;
-	margin-top:31px;
+	padding: 31px 15.5px;
+    margin-bottom: 31px;
 }
 #send-left{
 		float:left;
 		background-image:url(../images/newimg.png);
 		background-size:100%;
 		width:110px;
-		margin-left:15.5px;
 		height:39px;
 
 }
@@ -103,6 +103,5 @@ nav{
 		background-image:url(../images/confirmimg.png);
 		background-size:100%;
 		width:110px;
-		margin-right:15.5px;
 		height:39px;
 }
