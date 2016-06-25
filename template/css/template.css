@@ -11,6 +11,11 @@ body{
 	font-family:微软雅黑;
 }
 header{
+	position:fixed;
+	width:100%;
+	z-index:100;
+}
+.head{
 	height:48px;
 	background-color:rgb(247,76,69);
 	font-size:20px;
@@ -19,10 +24,10 @@ header{
 	padding-left:15.5px;
 	padding-right:15.5px;
 }
-.header-left{
+.head-left{
 	float:left;
 }
-.header-right{
+.head-right{
 	float:right;
 }
 nav{
@@ -32,20 +37,29 @@ nav{
 	padding-left:15.5px;
 	padding-right:15.5px;
 }
-.nav-ul{
-	list-style-type:none;
+.div-nav{
+	height:42px;
+	background-color:rgb(74,74,74);
+	text-align:center;
+	padding-left:15.5px;
+	padding-right:15.5px;
 	display:flex;
 	flex-flow: row nowrap;
 	justify-content: space-between;
 	align-items:center;
 }
-.nav-li{
-	float:left;
-	line-height:42px;
+.swiper-pagination-bullet {
+	width:100%
+   line-height:42px;
+   color: rgb(247,76,69);
 }
-.nav-li a{
-	color: rgb(247,76,69);
-	text-decoration:none;
+.swiper-pagination-bullet-active{
+	color:#FFF;
+}
+.wrap{
+	position:absolute;
+	top:90px;
+	width:100%;
 }
 #wrapper{
 	overflow:hidden;
