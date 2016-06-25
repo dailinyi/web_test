@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>编辑图片</title>
+
+    <link href="css/imgeditor.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/jquery.min.js""></script>
+    
+    <script type="text/javascript">
+		/*$(document).ready(function() {
+			$('#wrapper').width($(window).width());
+			$('.wrap-ul li').width($(window).width());
+			$('.row').width($(window).width());
+			var $v_li=$(".wrap-ul li");
+			var v_width=$(window).width();
+			var r_width=0;
+			var len=$v_li.length;
+			var page=1;
+			//页面点击切换时间
+			$(".nav-li").click(function(){
+				$(".nav-li a").css('color','rgb(247,76,69)');
+				$(this).children("a").css('color','#FFF');
+				$v_li.css({left:'-='+v_width});
+				page = $(this).index();//当前索引值
+				$v_li.css({left:-v_width*page});
+				r_width=v_width*page;
+				page++;
+			});
+			
+			//左右切换事件
+			$("#wrapper").on("touchstart", function(e) {
+				e.preventDefault();
+				startX = e.originalEvent.changedTouches[0].pageX;
+			});
+			$("#wrapper").on("touchmove", function(e) {
+				e.preventDefault();
+				moveEndX = e.originalEvent.changedTouches[0].pageX;
+				X = moveEndX - startX;
+				if ( X > 0 ) {
+					if(!$v_li.is(":animated")){
+						if(page>1){
+							$v_li.animate({left:('+='+v_width)+'+'+r_width},"slow");
+							page--;
+							$(".nav-li a").css('color','rgb(247,76,69)');
+							$(".nav-li:eq(" + (page-1) + ") a").css('color','#FFF');
+						}
+					}
+				}else if ( X < 0 ) {
+					if(!$v_li.is(":animated")){
+						if(page<len){
+							$v_li.animate({left:('-='+v_width)+'+'+r_width},"slow");
+							console.log(('-='+v_width)+'+'+r_width);
+							$(".nav-li a").css('color','rgb(247,76,69)');
+							$(".nav-li:eq(" + page + ") a").css('color','#FFF');
+							page++;
+						}
+					}
+				}
+			});
+			
+			//点击列表音乐选中事件
+			
+			//关闭事件
+			$(".header-right").click(function(){
+				
+			});
+		});*/
+	</script>
+
+  </head>
+  
+  <body>
+      <header>
+          <div class="header-left">编辑图片</div>
+          <div class="header-right"><img src="images/close.png" alt="" width="20px" height="20px" /></div>
+      </header>
+    <div id="wrapper">
+                <div class="row">
+                	<div class="row1">
+                      <div class="list"><img src="images/51506.jpg" alt=""/><div class="img-close"><img src="images/imgclose.png" alt="" /></div></div>
+                      <div class="list"><img src="images/51506.jpg" alt=""/><div class="img-close"><img src="images/imgclose.png" alt="" /></div></div>
+                      <div class="list"><img src="images/51506.jpg" alt=""/><div class="img-close"><img src="images/imgclose.png" alt="" /></div></div>
+                      <div class="list"><img src="images/51506.jpg" alt=""/><div class="img-close"><img src="images/imgclose.png" alt="" /></div></div>
+                      <div class="list"><img src="images/51506.jpg" alt=""/><div class="img-close"><img src="images/imgclose.png" alt="" /></div></div>
+                      <div class="list"><img src="images/51506.jpg" alt=""/><div class="img-close"><img src="images/imgclose.png" alt="" /></div></div>
+                      <div class="list"><img src="images/51506.jpg" alt=""/><div class="img-close"><img src="images/imgclose.png" alt="" /></div></div>
+                      <div class="list"><img src="images/51506.jpg" alt=""/><div class="img-close"><img src="images/imgclose.png" alt="" /></div></div>
+                      <div class="list"><img src="images/51506.jpg" alt=""/><div class="img-close"><img src="images/imgclose.png" alt="" /></div></div>
+                      <div class="list"><img src="images/51506.jpg" alt=""/><div class="img-close"><img src="images/imgclose.png" alt="" /></div></div>
+                 	</div>
+                </div>
+                <div class="imgbutton">
+                    <a id="send-left">新增图片</a>
+                    <a id="send-right">确认</a>
+                </div>
+    </div>
+  </body>
+</html>
